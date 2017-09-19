@@ -30,6 +30,8 @@ module ShipEngine
       return data
     end
 
+    private
+
     # 
     # 
     # @param addresses 
