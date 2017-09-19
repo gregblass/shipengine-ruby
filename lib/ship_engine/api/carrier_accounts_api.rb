@@ -32,6 +32,291 @@ module ShipEngine
 
     # 
     # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def access_worldwide_disconnect_account(carrier_id, opts = {})
+      access_worldwide_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def apc_connect_account(model, opts = {})
+      data, _status_code, _headers = apc_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def apc_disconnect_account(carrier_id, opts = {})
+      apc_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def asendia_connect_account(model, opts = {})
+      data, _status_code, _headers = asendia_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def asendia_disconnect_account(carrier_id, opts = {})
+      asendia_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def dhl_express_connect_account(model, opts = {})
+      data, _status_code, _headers = dhl_express_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def dhl_express_disconnect_account(carrier_id, opts = {})
+      dhl_express_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param settings 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def dhl_express_update_settings(carrier_id, settings, opts = {})
+      dhl_express_update_settings_with_http_info(carrier_id, settings, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def endicia_connect_account(model, opts = {})
+      data, _status_code, _headers = endicia_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def endicia_disconnect_account(carrier_id, opts = {})
+      endicia_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def fedex_connect_account(model, opts = {})
+      data, _status_code, _headers = fedex_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def fedex_disconnect_account(carrier_id, opts = {})
+      fedex_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param settings 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def fedex_update_settings(carrier_id, settings, opts = {})
+      fedex_update_settings_with_http_info(carrier_id, settings, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def first_mile_connect_account(model, opts = {})
+      data, _status_code, _headers = first_mile_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def first_mile_disconnect_account(carrier_id, opts = {})
+      first_mile_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def globegistics_connect_account(model, opts = {})
+      data, _status_code, _headers = globegistics_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def globegistics_disconnect_account(carrier_id, opts = {})
+      globegistics_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def imex_connect_account(model, opts = {})
+      data, _status_code, _headers = imex_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def imex_disconnect_account(carrier_id, opts = {})
+      imex_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def on_trac_connect_account(model, opts = {})
+      data, _status_code, _headers = on_trac_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def on_trac_disconnect_account(carrier_id, opts = {})
+      on_trac_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def rr_donnelley_connect_account(model, opts = {})
+      data, _status_code, _headers = rr_donnelley_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def rr_donnelley_disconnect_account(carrier_id, opts = {})
+      rr_donnelley_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def stamps_connect_account(model, opts = {})
+      data, _status_code, _headers = stamps_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def stamps_disconnect_account(carrier_id, opts = {})
+      stamps_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param model 
+    # @param [Hash] opts the optional parameters
+    # @return [ConnectAccountResponseDTO]
+    def ups_connect_account(model, opts = {})
+      data, _status_code, _headers = ups_connect_account_with_http_info(model, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def ups_disconnect_account(carrier_id, opts = {})
+      ups_disconnect_account_with_http_info(carrier_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param settings 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def ups_update_settings(carrier_id, settings, opts = {})
+      ups_update_settings_with_http_info(carrier_id, settings, opts)
+      return nil
+    end
+
+    private
+    
+    # 
+    # 
     # @param model 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ConnectAccountResponseDTO, Fixnum, Hash)>] ConnectAccountResponseDTO data, response status code and response headers
@@ -79,16 +364,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def access_worldwide_disconnect_account(carrier_id, opts = {})
-      access_worldwide_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def access_worldwide_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -125,16 +400,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#access_worldwide_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def apc_connect_account(model, opts = {})
-      data, _status_code, _headers = apc_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -186,16 +451,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def apc_disconnect_account(carrier_id, opts = {})
-      apc_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def apc_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -232,16 +487,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#apc_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def asendia_connect_account(model, opts = {})
-      data, _status_code, _headers = asendia_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -293,16 +538,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def asendia_disconnect_account(carrier_id, opts = {})
-      asendia_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def asendia_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -339,16 +574,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#asendia_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def dhl_express_connect_account(model, opts = {})
-      data, _status_code, _headers = dhl_express_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -400,16 +625,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def dhl_express_disconnect_account(carrier_id, opts = {})
-      dhl_express_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def dhl_express_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -446,17 +661,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#dhl_express_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param settings 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def dhl_express_update_settings(carrier_id, settings, opts = {})
-      dhl_express_update_settings_with_http_info(carrier_id, settings, opts)
-      return nil
     end
 
     # 
@@ -512,16 +716,6 @@ module ShipEngine
     # 
     # @param model 
     # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def endicia_connect_account(model, opts = {})
-      data, _status_code, _headers = endicia_connect_account_with_http_info(model, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(ConnectAccountResponseDTO, Fixnum, Hash)>] ConnectAccountResponseDTO data, response status code and response headers
     def endicia_connect_account_with_http_info(model, opts = {})
       if @api_client.config.debugging
@@ -567,16 +761,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def endicia_disconnect_account(carrier_id, opts = {})
-      endicia_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def endicia_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -613,16 +797,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#endicia_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def fedex_connect_account(model, opts = {})
-      data, _status_code, _headers = fedex_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -674,16 +848,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def fedex_disconnect_account(carrier_id, opts = {})
-      fedex_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def fedex_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -720,17 +884,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#fedex_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param settings 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def fedex_update_settings(carrier_id, settings, opts = {})
-      fedex_update_settings_with_http_info(carrier_id, settings, opts)
-      return nil
     end
 
     # 
@@ -786,16 +939,6 @@ module ShipEngine
     # 
     # @param model 
     # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def first_mile_connect_account(model, opts = {})
-      data, _status_code, _headers = first_mile_connect_account_with_http_info(model, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(ConnectAccountResponseDTO, Fixnum, Hash)>] ConnectAccountResponseDTO data, response status code and response headers
     def first_mile_connect_account_with_http_info(model, opts = {})
       if @api_client.config.debugging
@@ -841,16 +984,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def first_mile_disconnect_account(carrier_id, opts = {})
-      first_mile_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def first_mile_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -887,16 +1020,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#first_mile_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def globegistics_connect_account(model, opts = {})
-      data, _status_code, _headers = globegistics_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -948,16 +1071,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def globegistics_disconnect_account(carrier_id, opts = {})
-      globegistics_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def globegistics_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -994,16 +1107,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#globegistics_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def imex_connect_account(model, opts = {})
-      data, _status_code, _headers = imex_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -1055,16 +1158,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def imex_disconnect_account(carrier_id, opts = {})
-      imex_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def imex_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -1101,16 +1194,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#imex_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def on_trac_connect_account(model, opts = {})
-      data, _status_code, _headers = on_trac_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -1162,16 +1245,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def on_trac_disconnect_account(carrier_id, opts = {})
-      on_trac_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def on_trac_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -1208,16 +1281,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#on_trac_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def rr_donnelley_connect_account(model, opts = {})
-      data, _status_code, _headers = rr_donnelley_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -1269,16 +1332,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def rr_donnelley_disconnect_account(carrier_id, opts = {})
-      rr_donnelley_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def rr_donnelley_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -1315,16 +1368,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#rr_donnelley_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def stamps_connect_account(model, opts = {})
-      data, _status_code, _headers = stamps_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -1376,16 +1419,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def stamps_disconnect_account(carrier_id, opts = {})
-      stamps_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def stamps_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -1422,16 +1455,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#stamps_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param model 
-    # @param [Hash] opts the optional parameters
-    # @return [ConnectAccountResponseDTO]
-    def ups_connect_account(model, opts = {})
-      data, _status_code, _headers = ups_connect_account_with_http_info(model, opts)
-      return data
     end
 
     # 
@@ -1483,16 +1506,6 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def ups_disconnect_account(carrier_id, opts = {})
-      ups_disconnect_account_with_http_info(carrier_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def ups_disconnect_account_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -1529,17 +1542,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarrierAccountsApi#ups_disconnect_account\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param settings 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def ups_update_settings(carrier_id, settings, opts = {})
-      ups_update_settings_with_http_info(carrier_id, settings, opts)
-      return nil
     end
 
     # 
