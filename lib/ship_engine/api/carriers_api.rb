@@ -34,6 +34,47 @@ module ShipEngine
     # 
     # @param carrier_id 
     # @param [Hash] opts the optional parameters
+    # @return [CarrierListOptionsResponse]
+    def get_options(carrier_id, opts = {})
+      data, _status_code, _headers = get_options_with_http_info(carrier_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [CarrierListResponse]
+    def list(opts = {})
+      data, _status_code, _headers = list_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [CarrierListPackagesResponse]
+    def list_packages(carrier_id, opts = {})
+      data, _status_code, _headers = list_packages_with_http_info(carrier_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
+    # @return [CarrierListServicesResponse]
+    def list_services(carrier_id, opts = {})
+      data, _status_code, _headers = list_services_with_http_info(carrier_id, opts)
+      return data
+    end
+
+    private
+    
+    # 
+    # 
+    # @param carrier_id 
+    # @param [Hash] opts the optional parameters
     # @return [Array<(Carrier, Fixnum, Hash)>] Carrier data, response status code and response headers
     def get_with_http_info(carrier_id, opts = {})
       if @api_client.config.debugging
@@ -71,16 +112,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarriersApi#get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
-    # @return [CarrierListOptionsResponse]
-    def get_options(carrier_id, opts = {})
-      data, _status_code, _headers = get_options_with_http_info(carrier_id, opts)
-      return data
     end
 
     # 
@@ -129,15 +160,6 @@ module ShipEngine
     # 
     # 
     # @param [Hash] opts the optional parameters
-    # @return [CarrierListResponse]
-    def list(opts = {})
-      data, _status_code, _headers = list_with_http_info(opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(CarrierListResponse, Fixnum, Hash)>] CarrierListResponse data, response status code and response headers
     def list_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -171,16 +193,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarriersApi#list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
-    # @return [CarrierListPackagesResponse]
-    def list_packages(carrier_id, opts = {})
-      data, _status_code, _headers = list_packages_with_http_info(carrier_id, opts)
-      return data
     end
 
     # 
@@ -224,16 +236,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: CarriersApi#list_packages\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param carrier_id 
-    # @param [Hash] opts the optional parameters
-    # @return [CarrierListServicesResponse]
-    def list_services(carrier_id, opts = {})
-      data, _status_code, _headers = list_services_with_http_info(carrier_id, opts)
-      return data
     end
 
     # 
