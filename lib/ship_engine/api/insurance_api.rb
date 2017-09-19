@@ -32,6 +32,17 @@ module ShipEngine
 
     # 
     # 
+    # @param [Hash] opts the optional parameters
+    # @return [MoneyDTO]
+    def get_balance(opts = {})
+      data, _status_code, _headers = get_balance_with_http_info(opts)
+      return data
+    end
+
+    private
+
+    # 
+    # 
     # @param cost 
     # @param [Hash] opts the optional parameters
     # @return [Array<(MoneyDTO, Fixnum, Hash)>] MoneyDTO data, response status code and response headers
@@ -73,15 +84,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: InsuranceApi#add_funds\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
-    # @return [MoneyDTO]
-    def get_balance(opts = {})
-      data, _status_code, _headers = get_balance_with_http_info(opts)
-      return data
     end
 
     # 
