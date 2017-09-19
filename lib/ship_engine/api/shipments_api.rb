@@ -34,6 +34,113 @@ module ShipEngine
     # 
     # 
     # @param shipment_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def cancel(shipment_id, opts = {})
+      cancel_with_http_info(shipment_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param shipments_request 
+    # @param [Hash] opts the optional parameters
+    # @return [CreateShipmentsResponse]
+    def create(shipments_request, opts = {})
+      data, _status_code, _headers = create_with_http_info(shipments_request, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param shipment_id 
+    # @param [Hash] opts the optional parameters
+    # @return [Shipment]
+    def get(shipment_id, opts = {})
+      data, _status_code, _headers = get_with_http_info(shipment_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param external_shipment_id 
+    # @param [Hash] opts the optional parameters
+    # @return [Shipment]
+    def get_by_external_id(external_shipment_id, opts = {})
+      data, _status_code, _headers = get_by_external_id_with_http_info(external_shipment_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param shipment_id 
+    # @param [Hash] opts the optional parameters
+    # @option opts [DateTime] :created_at_start 
+    # @return [RateResponse]
+    def get_rates_for_shipment(shipment_id, opts = {})
+      data, _status_code, _headers = get_rates_for_shipment_with_http_info(shipment_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :batch_id 
+    # @option opts [String] :tag 
+    # @option opts [String] :shipment_status 
+    # @option opts [DateTime] :modified_at_start 
+    # @option opts [DateTime] :modified_at_end 
+    # @option opts [DateTime] :created_at_start 
+    # @option opts [DateTime] :created_at_end 
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :page_size 
+    # @option opts [String] :sort_dir 
+    # @option opts [String] :sort_by 
+    # @return [ListShipmentResponse]
+    def list(opts = {})
+      data, _status_code, _headers = list_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param shipment_id 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :pagesize 
+    # @return [ShipmentResponseErrors]
+    def list_errors(shipment_id, opts = {})
+      data, _status_code, _headers = list_errors_with_http_info(shipment_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param shipment_id 
+    # @param tag 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def remove_tag(shipment_id, tag, opts = {})
+      remove_tag_with_http_info(shipment_id, tag, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param shipment_id 
+    # @param shipment 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def update(shipment_id, shipment, opts = {})
+      update_with_http_info(shipment_id, shipment, opts)
+      return nil
+    end
+
+    private
+
+    # 
+    # 
+    # @param shipment_id 
     # @param tag 
     # @param [Hash] opts the optional parameters
     # @return [Array<(ShipmentAddTagResponse, Fixnum, Hash)>] ShipmentAddTagResponse data, response status code and response headers
@@ -83,16 +190,6 @@ module ShipEngine
     # 
     # @param shipment_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def cancel(shipment_id, opts = {})
-      cancel_with_http_info(shipment_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param shipment_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def cancel_with_http_info(shipment_id, opts = {})
       if @api_client.config.debugging
@@ -129,16 +226,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: ShipmentsApi#cancel\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param shipments_request 
-    # @param [Hash] opts the optional parameters
-    # @return [CreateShipmentsResponse]
-    def create(shipments_request, opts = {})
-      data, _status_code, _headers = create_with_http_info(shipments_request, opts)
-      return data
     end
 
     # 
@@ -190,16 +277,6 @@ module ShipEngine
     # 
     # @param shipment_id 
     # @param [Hash] opts the optional parameters
-    # @return [Shipment]
-    def get(shipment_id, opts = {})
-      data, _status_code, _headers = get_with_http_info(shipment_id, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param shipment_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(Shipment, Fixnum, Hash)>] Shipment data, response status code and response headers
     def get_with_http_info(shipment_id, opts = {})
       if @api_client.config.debugging
@@ -237,16 +314,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: ShipmentsApi#get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param external_shipment_id 
-    # @param [Hash] opts the optional parameters
-    # @return [Shipment]
-    def get_by_external_id(external_shipment_id, opts = {})
-      data, _status_code, _headers = get_by_external_id_with_http_info(external_shipment_id, opts)
-      return data
     end
 
     # 
@@ -297,17 +364,6 @@ module ShipEngine
     # @param shipment_id 
     # @param [Hash] opts the optional parameters
     # @option opts [DateTime] :created_at_start 
-    # @return [RateResponse]
-    def get_rates_for_shipment(shipment_id, opts = {})
-      data, _status_code, _headers = get_rates_for_shipment_with_http_info(shipment_id, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param shipment_id 
-    # @param [Hash] opts the optional parameters
-    # @option opts [DateTime] :created_at_start 
     # @return [Array<(RateResponse, Fixnum, Hash)>] RateResponse data, response status code and response headers
     def get_rates_for_shipment_with_http_info(shipment_id, opts = {})
       if @api_client.config.debugging
@@ -346,26 +402,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: ShipmentsApi#get_rates_for_shipment\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :batch_id 
-    # @option opts [String] :tag 
-    # @option opts [String] :shipment_status 
-    # @option opts [DateTime] :modified_at_start 
-    # @option opts [DateTime] :modified_at_end 
-    # @option opts [DateTime] :created_at_start 
-    # @option opts [DateTime] :created_at_end 
-    # @option opts [Integer] :page 
-    # @option opts [Integer] :page_size 
-    # @option opts [String] :sort_dir 
-    # @option opts [String] :sort_by 
-    # @return [ListShipmentResponse]
-    def list(opts = {})
-      data, _status_code, _headers = list_with_http_info(opts)
-      return data
     end
 
     # 
@@ -443,18 +479,6 @@ module ShipEngine
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page 
     # @option opts [Integer] :pagesize 
-    # @return [ShipmentResponseErrors]
-    def list_errors(shipment_id, opts = {})
-      data, _status_code, _headers = list_errors_with_http_info(shipment_id, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param shipment_id 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page 
-    # @option opts [Integer] :pagesize 
     # @return [Array<(ShipmentResponseErrors, Fixnum, Hash)>] ShipmentResponseErrors data, response status code and response headers
     def list_errors_with_http_info(shipment_id, opts = {})
       if @api_client.config.debugging
@@ -494,17 +518,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: ShipmentsApi#list_errors\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param shipment_id 
-    # @param tag 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def remove_tag(shipment_id, tag, opts = {})
-      remove_tag_with_http_info(shipment_id, tag, opts)
-      return nil
     end
 
     # 
@@ -552,17 +565,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: ShipmentsApi#remove_tag\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param shipment_id 
-    # @param shipment 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def update(shipment_id, shipment, opts = {})
-      update_with_http_info(shipment_id, shipment, opts)
-      return nil
     end
 
     # 
