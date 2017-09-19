@@ -32,6 +32,38 @@ module ShipEngine
 
     # 
     # 
+    # @param rate_id 
+    # @param [Hash] opts the optional parameters
+    # @return [Rate]
+    def get(rate_id, opts = {})
+      data, _status_code, _headers = get_with_http_info(rate_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param request 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def rate_shipment(request, opts = {})
+      rate_shipment_with_http_info(request, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param request 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def rate_shipments_async(request, opts = {})
+      rate_shipments_async_with_http_info(request, opts)
+      return nil
+    end
+
+    private
+
+    # 
+    # 
     # @param estimate_request 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<Rate>, Fixnum, Hash)>] Array<Rate> data, response status code and response headers
@@ -73,16 +105,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: RatesApi#estimate\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param rate_id 
-    # @param [Hash] opts the optional parameters
-    # @return [Rate]
-    def get(rate_id, opts = {})
-      data, _status_code, _headers = get_with_http_info(rate_id, opts)
-      return data
     end
 
     # 
@@ -132,16 +154,6 @@ module ShipEngine
     # 
     # @param request 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def rate_shipment(request, opts = {})
-      rate_shipment_with_http_info(request, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param request 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def rate_shipment_with_http_info(request, opts = {})
       if @api_client.config.debugging
@@ -180,16 +192,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: RatesApi#rate_shipment\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param request 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def rate_shipments_async(request, opts = {})
-      rate_shipments_async_with_http_info(request, opts)
-      return nil
     end
 
     # 
