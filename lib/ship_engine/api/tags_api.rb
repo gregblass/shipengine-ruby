@@ -34,6 +34,38 @@ module ShipEngine
     # 
     # @param tag_name 
     # @param [Hash] opts the optional parameters
+    # @return [ListTagResponse]
+    def delete(tag_name, opts = {})
+      data, _status_code, _headers = delete_with_http_info(tag_name, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [ListTagResponse]
+    def list(opts = {})
+      data, _status_code, _headers = list_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param tag_name 
+    # @param new_name 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def update(tag_name, new_name, opts = {})
+      update_with_http_info(tag_name, new_name, opts)
+      return nil
+    end
+
+    private
+
+    # 
+    # 
+    # @param tag_name 
+    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def add_tag_with_http_info(tag_name, opts = {})
       if @api_client.config.debugging
@@ -70,16 +102,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: TagsApi#add_tag\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param tag_name 
-    # @param [Hash] opts the optional parameters
-    # @return [ListTagResponse]
-    def delete(tag_name, opts = {})
-      data, _status_code, _headers = delete_with_http_info(tag_name, opts)
-      return data
     end
 
     # 
@@ -128,15 +150,6 @@ module ShipEngine
     # 
     # 
     # @param [Hash] opts the optional parameters
-    # @return [ListTagResponse]
-    def list(opts = {})
-      data, _status_code, _headers = list_with_http_info(opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(ListTagResponse, Fixnum, Hash)>] ListTagResponse data, response status code and response headers
     def list_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -170,17 +183,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: TagsApi#list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param tag_name 
-    # @param new_name 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def update(tag_name, new_name, opts = {})
-      update_with_http_info(tag_name, new_name, opts)
-      return nil
     end
 
     # 
