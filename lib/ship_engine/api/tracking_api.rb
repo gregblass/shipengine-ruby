@@ -36,6 +36,30 @@ module ShipEngine
     # @param [Hash] opts the optional parameters
     # @option opts [String] :carrier_code 
     # @option opts [String] :tracking_number 
+    # @return [nil]
+    def stop_tracking(opts = {})
+      stop_tracking_with_http_info(opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :carrier_code 
+    # @option opts [String] :tracking_number 
+    # @return [TrackingInformation]
+    def track(opts = {})
+      data, _status_code, _headers = track_with_http_info(opts)
+      return data
+    end
+
+    private
+
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :carrier_code 
+    # @option opts [String] :tracking_number 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def start_tracking_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -77,17 +101,6 @@ module ShipEngine
     # @param [Hash] opts the optional parameters
     # @option opts [String] :carrier_code 
     # @option opts [String] :tracking_number 
-    # @return [nil]
-    def stop_tracking(opts = {})
-      stop_tracking_with_http_info(opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :carrier_code 
-    # @option opts [String] :tracking_number 
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def stop_tracking_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -122,17 +135,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: TrackingApi#stop_tracking\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :carrier_code 
-    # @option opts [String] :tracking_number 
-    # @return [TrackingInformation]
-    def track(opts = {})
-      data, _status_code, _headers = track_with_http_info(opts)
-      return data
     end
 
     # 
