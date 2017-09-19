@@ -32,6 +32,48 @@ module ShipEngine
 
     # 
     # 
+    # @param warehouse_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete(warehouse_id, opts = {})
+      delete_with_http_info(warehouse_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param warehouse_id 
+    # @param [Hash] opts the optional parameters
+    # @return [WarehouseDTO]
+    def get(warehouse_id, opts = {})
+      data, _status_code, _headers = get_with_http_info(warehouse_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [WarehouseListDTO]
+    def list(opts = {})
+      data, _status_code, _headers = list_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param warehouse_id 
+    # @param request 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def update(warehouse_id, request, opts = {})
+      update_with_http_info(warehouse_id, request, opts)
+      return nil
+    end
+
+    private
+
+    # 
+    # 
     # @param request 
     # @param [Hash] opts the optional parameters
     # @return [Array<(WarehouseDTO, Fixnum, Hash)>] WarehouseDTO data, response status code and response headers
@@ -73,16 +115,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: WarehousesApi#create\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param warehouse_id 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def delete(warehouse_id, opts = {})
-      delete_with_http_info(warehouse_id, opts)
-      return nil
     end
 
     # 
@@ -131,16 +163,6 @@ module ShipEngine
     # 
     # @param warehouse_id 
     # @param [Hash] opts the optional parameters
-    # @return [WarehouseDTO]
-    def get(warehouse_id, opts = {})
-      data, _status_code, _headers = get_with_http_info(warehouse_id, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param warehouse_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(WarehouseDTO, Fixnum, Hash)>] WarehouseDTO data, response status code and response headers
     def get_with_http_info(warehouse_id, opts = {})
       if @api_client.config.debugging
@@ -183,15 +205,6 @@ module ShipEngine
     # 
     # 
     # @param [Hash] opts the optional parameters
-    # @return [WarehouseListDTO]
-    def list(opts = {})
-      data, _status_code, _headers = list_with_http_info(opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(WarehouseListDTO, Fixnum, Hash)>] WarehouseListDTO data, response status code and response headers
     def list_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -225,17 +238,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: WarehousesApi#list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param warehouse_id 
-    # @param request 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def update(warehouse_id, request, opts = {})
-      update_with_http_info(warehouse_id, request, opts)
-      return nil
     end
 
     # 
