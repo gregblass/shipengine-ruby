@@ -32,6 +32,17 @@ module ShipEngine
     # 
     # 
     # @param [Hash] opts the optional parameters
+    # @return [Object]
+    def whoami(opts = {})
+      data, _status_code, _headers = whoami_with_http_info(opts)
+      return data
+    end
+
+    private
+    
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
     # @return [Array<(Object, Fixnum, Hash)>] Object data, response status code and response headers
     def webhooks_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -65,15 +76,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: EnvironmentApi#webhooks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
-    # @return [Object]
-    def whoami(opts = {})
-      data, _status_code, _headers = whoami_with_http_info(opts)
-      return data
     end
 
     # 
