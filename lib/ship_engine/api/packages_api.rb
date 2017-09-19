@@ -32,6 +32,48 @@ module ShipEngine
 
     # 
     # 
+    # @param package_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def delete(package_id, opts = {})
+      delete_with_http_info(package_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param package_id 
+    # @param [Hash] opts the optional parameters
+    # @return [Package]
+    def get(package_id, opts = {})
+      data, _status_code, _headers = get_with_http_info(package_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [PackagesListResponse]
+    def list(opts = {})
+      data, _status_code, _headers = list_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param package_id 
+    # @param package 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def update(package_id, package, opts = {})
+      update_with_http_info(package_id, package, opts)
+      return nil
+    end
+
+    private
+
+    # 
+    # 
     # @param package 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Package, Fixnum, Hash)>] Package data, response status code and response headers
@@ -73,16 +115,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: PackagesApi#create\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param package_id 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def delete(package_id, opts = {})
-      delete_with_http_info(package_id, opts)
-      return nil
     end
 
     # 
@@ -131,16 +163,6 @@ module ShipEngine
     # 
     # @param package_id 
     # @param [Hash] opts the optional parameters
-    # @return [Package]
-    def get(package_id, opts = {})
-      data, _status_code, _headers = get_with_http_info(package_id, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param package_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(Package, Fixnum, Hash)>] Package data, response status code and response headers
     def get_with_http_info(package_id, opts = {})
       if @api_client.config.debugging
@@ -183,15 +205,6 @@ module ShipEngine
     # 
     # 
     # @param [Hash] opts the optional parameters
-    # @return [PackagesListResponse]
-    def list(opts = {})
-      data, _status_code, _headers = list_with_http_info(opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(PackagesListResponse, Fixnum, Hash)>] PackagesListResponse data, response status code and response headers
     def list_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -225,17 +238,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: PackagesApi#list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param package_id 
-    # @param package 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def update(package_id, package, opts = {})
-      update_with_http_info(package_id, package, opts)
-      return nil
     end
 
     # 
