@@ -33,6 +33,86 @@ module ShipEngine
 
     # 
     # 
+    # @param request 
+    # @param [Hash] opts the optional parameters
+    # @return [Batch]
+    def create(request, opts = {})
+      data, _status_code, _headers = create_with_http_info(request, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param batch_id 
+    # @param [Hash] opts the optional parameters
+    # @return [Batch]
+    def get(batch_id, opts = {})
+      data, _status_code, _headers = get_with_http_info(batch_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param external_batch_id 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def get_by_external_id(external_batch_id, opts = {})
+      get_by_external_id_with_http_info(external_batch_id, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :status 
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :page_size 
+    # @option opts [String] :sort_dir 
+    # @option opts [String] :sort_by 
+    # @return [ListBatchResponse]
+    def list(opts = {})
+      data, _status_code, _headers = list_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param batch_id 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :pagesize 
+    # @return [BatchResponseErrors]
+    def list_errors(batch_id, opts = {})
+      data, _status_code, _headers = list_errors_with_http_info(batch_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param batch_id 
+    # @param process_batch_request 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def process(batch_id, process_batch_request, opts = {})
+      process_with_http_info(batch_id, process_batch_request, opts)
+      return nil
+    end
+
+    # 
+    # 
+    # @param batch_id 
+    # @param request 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def remove_from_batch(batch_id, request, opts = {})
+      remove_from_batch_with_http_info(batch_id, request, opts)
+      return nil
+    end
+
+    private
+
+    # 
+    # 
     # @param batch_id 
     # @param request 
     # @param [Hash] opts the optional parameters
@@ -84,16 +164,6 @@ module ShipEngine
     # 
     # @param request 
     # @param [Hash] opts the optional parameters
-    # @return [Batch]
-    def create(request, opts = {})
-      data, _status_code, _headers = create_with_http_info(request, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param request 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(Batch, Fixnum, Hash)>] Batch data, response status code and response headers
     def create_with_http_info(request, opts = {})
       if @api_client.config.debugging
@@ -133,16 +203,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: BatchesApi#create\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param batch_id 
-    # @param [Hash] opts the optional parameters
-    # @return [Batch]
-    def get(batch_id, opts = {})
-      data, _status_code, _headers = get_with_http_info(batch_id, opts)
-      return data
     end
 
     # 
@@ -192,16 +252,6 @@ module ShipEngine
     # 
     # @param external_batch_id 
     # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def get_by_external_id(external_batch_id, opts = {})
-      get_by_external_id_with_http_info(external_batch_id, opts)
-      return nil
-    end
-
-    # 
-    # 
-    # @param external_batch_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def get_by_external_id_with_http_info(external_batch_id, opts = {})
       if @api_client.config.debugging
@@ -238,20 +288,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: BatchesApi#get_by_external_id\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :status 
-    # @option opts [Integer] :page 
-    # @option opts [Integer] :page_size 
-    # @option opts [String] :sort_dir 
-    # @option opts [String] :sort_by 
-    # @return [ListBatchResponse]
-    def list(opts = {})
-      data, _status_code, _headers = list_with_http_info(opts)
-      return data
     end
 
     # 
@@ -317,18 +353,6 @@ module ShipEngine
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :page 
     # @option opts [Integer] :pagesize 
-    # @return [BatchResponseErrors]
-    def list_errors(batch_id, opts = {})
-      data, _status_code, _headers = list_errors_with_http_info(batch_id, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param batch_id 
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :page 
-    # @option opts [Integer] :pagesize 
     # @return [Array<(BatchResponseErrors, Fixnum, Hash)>] BatchResponseErrors data, response status code and response headers
     def list_errors_with_http_info(batch_id, opts = {})
       if @api_client.config.debugging
@@ -368,17 +392,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: BatchesApi#list_errors\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param batch_id 
-    # @param process_batch_request 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def process(batch_id, process_batch_request, opts = {})
-      process_with_http_info(batch_id, process_batch_request, opts)
-      return nil
     end
 
     # 
@@ -428,17 +441,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: BatchesApi#process\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param batch_id 
-    # @param request 
-    # @param [Hash] opts the optional parameters
-    # @return [nil]
-    def remove_from_batch(batch_id, request, opts = {})
-      remove_from_batch_with_http_info(batch_id, request, opts)
-      return nil
     end
 
     # 
