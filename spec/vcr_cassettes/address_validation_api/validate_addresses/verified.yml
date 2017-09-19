@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.shipengine.com/v1/addresses/validate
+    body:
+      encoding: UTF-8
+      string: '[{"name":"Mickey and Minnie Mouse","phone":"714-781-4565","company_name":"The
+        Walt Disney Company","address_line1":"500 South Buena Vista Street","city_locality":"Burbank","state_province":"CA","postal_code":"91521","country_code":"US"}]'
+    headers:
+      User-Agent:
+      - Swagger-Codegen/1.0.0/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Api-Key:
+      - EQeX7jWYui+rPivFlrxT13siOrDlQvoEfmXCASNTOAU
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 18 Sep 2017 16:50:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '952'
+      Connection:
+      - keep-alive
+      X-Shipengine-Requestid:
+      - c27a5c2e-a6e1-4909-9f2d-41a9e8f94d8b
+    body:
+      encoding: UTF-8
+      string: "[\r\n  {\r\n    \"status\": \"verified\",\r\n    \"original_address\":
+        {\r\n      \"name\": \"Mickey and Minnie Mouse\",\r\n      \"phone\": \"714-781-4565\",\r\n
+        \     \"company_name\": \"The Walt Disney Company\",\r\n      \"address_line1\":
+        \"500 South Buena Vista Street\",\r\n      \"address_line2\": null,\r\n      \"address_line3\":
+        null,\r\n      \"city_locality\": \"Burbank\",\r\n      \"state_province\":
+        \"CA\",\r\n      \"postal_code\": \"91521\",\r\n      \"country_code\": \"US\",\r\n
+        \     \"address_residential_indicator\": \"unknown\"\r\n    },\r\n    \"matched_address\":
+        {\r\n      \"name\": \"MICKEY AND MINNIE MOUSE\",\r\n      \"phone\": \"714-781-4565\",\r\n
+        \     \"company_name\": \"THE WALT DISNEY COMPANY\",\r\n      \"address_line1\":
+        \"500 S BUENA VISTA ST\",\r\n      \"address_line2\": \"\",\r\n      \"address_line3\":
+        null,\r\n      \"city_locality\": \"BURBANK\",\r\n      \"state_province\":
+        \"CA\",\r\n      \"postal_code\": \"91521-0007\",\r\n      \"country_code\":
+        \"US\",\r\n      \"address_residential_indicator\": \"no\"\r\n    },\r\n    \"messages\":
+        []\r\n  }\r\n]"
+    http_version: 
+  recorded_at: Mon, 18 Sep 2017 16:50:47 GMT
+recorded_with: VCR 3.0.3

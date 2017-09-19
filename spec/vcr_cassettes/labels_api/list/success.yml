@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.shipengine.com/v1/labels?carrier_id=se-132585&service_code=usps_priority_mail
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swagger-Codegen/1.0.0/ruby
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Api-Key:
+      - EQeX7jWYui+rPivFlrxT13siOrDlQvoEfmXCASNTOAU
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 19 Sep 2017 15:43:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '418'
+      Connection:
+      - keep-alive
+      X-Shipengine-Requestid:
+      - 25b598fa-18b5-459c-b199-983a03c30e0a
+    body:
+      encoding: UTF-8
+      string: "{\r\n  \"labels\": [],\r\n  \"total\": 0,\r\n  \"page\": 1,\r\n  \"pages\":
+        0,\r\n  \"links\": {\r\n    \"first\": {\r\n      \"href\": \"https://api.shipengine.com/v1/labels?carrier_id=se-132585&service_code=usps_priority_mail&page=1&page_size=25\"\r\n
+        \   },\r\n    \"last\": {\r\n      \"href\": \"https://api.shipengine.com/v1/labels?carrier_id=se-132585&service_code=usps_priority_mail&page=1&page_size=25\"\r\n
+        \   },\r\n    \"prev\": {},\r\n    \"next\": {}\r\n  }\r\n}"
+    http_version: 
+  recorded_at: Tue, 19 Sep 2017 15:43:23 GMT
+recorded_with: VCR 3.0.3
