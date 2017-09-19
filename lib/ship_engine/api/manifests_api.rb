@@ -32,6 +32,35 @@ module ShipEngine
 
     # 
     # 
+    # @param manifest_id 
+    # @param [Hash] opts the optional parameters
+    # @return [Manifest]
+    def get(manifest_id, opts = {})
+      data, _status_code, _headers = get_with_http_info(manifest_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :warehouse_id 
+    # @option opts [DateTime] :ship_date_start 
+    # @option opts [DateTime] :ship_date_end 
+    # @option opts [DateTime] :created_at_start 
+    # @option opts [DateTime] :created_at_end 
+    # @option opts [String] :carrier_id 
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :page_size 
+    # @return [ManifestsListResponse]
+    def list(opts = {})
+      data, _status_code, _headers = list_with_http_info(opts)
+      return data
+    end
+
+    private
+
+    # 
+    # 
     # @param request 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Manifest, Fixnum, Hash)>] Manifest data, response status code and response headers
@@ -79,16 +108,6 @@ module ShipEngine
     # 
     # @param manifest_id 
     # @param [Hash] opts the optional parameters
-    # @return [Manifest]
-    def get(manifest_id, opts = {})
-      data, _status_code, _headers = get_with_http_info(manifest_id, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param manifest_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(Manifest, Fixnum, Hash)>] Manifest data, response status code and response headers
     def get_with_http_info(manifest_id, opts = {})
       if @api_client.config.debugging
@@ -126,23 +145,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: ManifestsApi#get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :warehouse_id 
-    # @option opts [DateTime] :ship_date_start 
-    # @option opts [DateTime] :ship_date_end 
-    # @option opts [DateTime] :created_at_start 
-    # @option opts [DateTime] :created_at_end 
-    # @option opts [String] :carrier_id 
-    # @option opts [Integer] :page 
-    # @option opts [Integer] :page_size 
-    # @return [ManifestsListResponse]
-    def list(opts = {})
-      data, _status_code, _headers = list_with_http_info(opts)
-      return data
     end
 
     # 
