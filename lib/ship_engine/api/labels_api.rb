@@ -32,6 +32,81 @@ module ShipEngine
 
     # 
     # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :batch_id 
+    # @option opts [String] :label_status 
+    # @option opts [String] :carrier_id 
+    # @option opts [String] :service_code 
+    # @option opts [String] :tracking_number 
+    # @option opts [String] :warehouse_id 
+    # @option opts [DateTime] :created_at_start 
+    # @option opts [DateTime] :created_at_end 
+    # @option opts [Integer] :page 
+    # @option opts [Integer] :page_size 
+    # @option opts [String] :sort_dir 
+    # @option opts [String] :sort_by 
+    # @return [ListLabelResponse]
+    def list(opts = {})
+      data, _status_code, _headers = list_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param request 
+    # @param [Hash] opts the optional parameters
+    # @return [Label]
+    def purchase_label(request, opts = {})
+      data, _status_code, _headers = purchase_label_with_http_info(request, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param rate_id 
+    # @param request 
+    # @param [Hash] opts the optional parameters
+    # @return [Label]
+    def purchase_label_with_rate(rate_id, request, opts = {})
+      data, _status_code, _headers = purchase_label_with_rate_with_http_info(rate_id, request, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param shipment_id 
+    # @param request 
+    # @param [Hash] opts the optional parameters
+    # @return [Label]
+    def purchase_label_with_shipment(shipment_id, request, opts = {})
+      data, _status_code, _headers = purchase_label_with_shipment_with_http_info(shipment_id, request, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param label_id 
+    # @param [Hash] opts the optional parameters
+    # @return [TrackingInformation]
+    def track(label_id, opts = {})
+      data, _status_code, _headers = track_with_http_info(label_id, opts)
+      return data
+    end
+
+    # 
+    # 
+    # @param label_id 
+    # @param [Hash] opts the optional parameters
+    # @return [VoidLabelResponse]
+    def void_label(label_id, opts = {})
+      data, _status_code, _headers = void_label_with_http_info(label_id, opts)
+      return data
+    end
+
+    private
+
+    # 
+    # 
     # @param label_id 
     # @param [Hash] opts the optional parameters
     # @return [Array<(Label, Fixnum, Hash)>] Label data, response status code and response headers
@@ -71,27 +146,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: LabelsApi#get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param [Hash] opts the optional parameters
-    # @option opts [String] :batch_id 
-    # @option opts [String] :label_status 
-    # @option opts [String] :carrier_id 
-    # @option opts [String] :service_code 
-    # @option opts [String] :tracking_number 
-    # @option opts [String] :warehouse_id 
-    # @option opts [DateTime] :created_at_start 
-    # @option opts [DateTime] :created_at_end 
-    # @option opts [Integer] :page 
-    # @option opts [Integer] :page_size 
-    # @option opts [String] :sort_dir 
-    # @option opts [String] :sort_by 
-    # @return [ListLabelResponse]
-    def list(opts = {})
-      data, _status_code, _headers = list_with_http_info(opts)
-      return data
     end
 
     # 
@@ -169,16 +223,6 @@ module ShipEngine
     # 
     # @param request 
     # @param [Hash] opts the optional parameters
-    # @return [Label]
-    def purchase_label(request, opts = {})
-      data, _status_code, _headers = purchase_label_with_http_info(request, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param request 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(Label, Fixnum, Hash)>] Label data, response status code and response headers
     def purchase_label_with_http_info(request, opts = {})
       if @api_client.config.debugging
@@ -218,17 +262,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: LabelsApi#purchase_label\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param rate_id 
-    # @param request 
-    # @param [Hash] opts the optional parameters
-    # @return [Label]
-    def purchase_label_with_rate(rate_id, request, opts = {})
-      data, _status_code, _headers = purchase_label_with_rate_with_http_info(rate_id, request, opts)
-      return data
     end
 
     # 
@@ -286,17 +319,6 @@ module ShipEngine
     # @param shipment_id 
     # @param request 
     # @param [Hash] opts the optional parameters
-    # @return [Label]
-    def purchase_label_with_shipment(shipment_id, request, opts = {})
-      data, _status_code, _headers = purchase_label_with_shipment_with_http_info(shipment_id, request, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param shipment_id 
-    # @param request 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(Label, Fixnum, Hash)>] Label data, response status code and response headers
     def purchase_label_with_shipment_with_http_info(shipment_id, request, opts = {})
       if @api_client.config.debugging
@@ -346,16 +368,6 @@ module ShipEngine
     # 
     # @param label_id 
     # @param [Hash] opts the optional parameters
-    # @return [TrackingInformation]
-    def track(label_id, opts = {})
-      data, _status_code, _headers = track_with_http_info(label_id, opts)
-      return data
-    end
-
-    # 
-    # 
-    # @param label_id 
-    # @param [Hash] opts the optional parameters
     # @return [Array<(TrackingInformation, Fixnum, Hash)>] TrackingInformation data, response status code and response headers
     def track_with_http_info(label_id, opts = {})
       if @api_client.config.debugging
@@ -393,16 +405,6 @@ module ShipEngine
         @api_client.config.logger.debug "API called: LabelsApi#track\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
-    end
-
-    # 
-    # 
-    # @param label_id 
-    # @param [Hash] opts the optional parameters
-    # @return [VoidLabelResponse]
-    def void_label(label_id, opts = {})
-      data, _status_code, _headers = void_label_with_http_info(label_id, opts)
-      return data
     end
 
     # 
