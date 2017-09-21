@@ -27,7 +27,7 @@ module ShipEngine
     # @return [Label]
     def get(label_id, opts = {})
       data, _status_code, _headers = get_with_http_info(label_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -48,7 +48,7 @@ module ShipEngine
     # @return [ListLabelResponse]
     def list(opts = {})
       data, _status_code, _headers = list_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -58,7 +58,7 @@ module ShipEngine
     # @return [Label]
     def purchase_label(request, opts = {})
       data, _status_code, _headers = purchase_label_with_http_info(request, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -69,7 +69,7 @@ module ShipEngine
     # @return [Label]
     def purchase_label_with_rate(rate_id, request, opts = {})
       data, _status_code, _headers = purchase_label_with_rate_with_http_info(rate_id, request, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -80,7 +80,7 @@ module ShipEngine
     # @return [Label]
     def purchase_label_with_shipment(shipment_id, request, opts = {})
       data, _status_code, _headers = purchase_label_with_shipment_with_http_info(shipment_id, request, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -90,7 +90,7 @@ module ShipEngine
     # @return [TrackingInformation]
     def track(label_id, opts = {})
       data, _status_code, _headers = track_with_http_info(label_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -100,7 +100,7 @@ module ShipEngine
     # @return [VoidLabelResponse]
     def void_label(label_id, opts = {})
       data, _status_code, _headers = void_label_with_http_info(label_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     private

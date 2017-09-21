@@ -28,7 +28,7 @@ module ShipEngine
     # @return [ShipmentAddTagResponse]
     def add_tag(shipment_id, tag, opts = {})
       data, _status_code, _headers = add_tag_with_http_info(shipment_id, tag, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -48,7 +48,7 @@ module ShipEngine
     # @return [CreateShipmentsResponse]
     def create(shipments_request, opts = {})
       data, _status_code, _headers = create_with_http_info(shipments_request, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -58,7 +58,7 @@ module ShipEngine
     # @return [Shipment]
     def get(shipment_id, opts = {})
       data, _status_code, _headers = get_with_http_info(shipment_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -68,7 +68,7 @@ module ShipEngine
     # @return [Shipment]
     def get_by_external_id(external_shipment_id, opts = {})
       data, _status_code, _headers = get_by_external_id_with_http_info(external_shipment_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -79,7 +79,7 @@ module ShipEngine
     # @return [RateResponse]
     def get_rates_for_shipment(shipment_id, opts = {})
       data, _status_code, _headers = get_rates_for_shipment_with_http_info(shipment_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -99,7 +99,7 @@ module ShipEngine
     # @return [ListShipmentResponse]
     def list(opts = {})
       data, _status_code, _headers = list_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -111,7 +111,7 @@ module ShipEngine
     # @return [ShipmentResponseErrors]
     def list_errors(shipment_id, opts = {})
       data, _status_code, _headers = list_errors_with_http_info(shipment_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 

@@ -27,7 +27,7 @@ module ShipEngine
     # @return [WarehouseDTO]
     def create(request, opts = {})
       data, _status_code, _headers = create_with_http_info(request, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -47,7 +47,7 @@ module ShipEngine
     # @return [WarehouseDTO]
     def get(warehouse_id, opts = {})
       data, _status_code, _headers = get_with_http_info(warehouse_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -56,7 +56,7 @@ module ShipEngine
     # @return [WarehouseListDTO]
     def list(opts = {})
       data, _status_code, _headers = list_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 

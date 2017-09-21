@@ -38,7 +38,7 @@ module ShipEngine
     # @return [Batch]
     def create(request, opts = {})
       data, _status_code, _headers = create_with_http_info(request, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -48,7 +48,7 @@ module ShipEngine
     # @return [Batch]
     def get(batch_id, opts = {})
       data, _status_code, _headers = get_with_http_info(batch_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -72,7 +72,7 @@ module ShipEngine
     # @return [ListBatchResponse]
     def list(opts = {})
       data, _status_code, _headers = list_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -84,7 +84,7 @@ module ShipEngine
     # @return [BatchResponseErrors]
     def list_errors(batch_id, opts = {})
       data, _status_code, _headers = list_errors_with_http_info(batch_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 

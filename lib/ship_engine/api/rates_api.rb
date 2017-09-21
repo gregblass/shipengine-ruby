@@ -27,7 +27,7 @@ module ShipEngine
     # @return [Array<Rate>]
     def estimate(estimate_request, opts = {})
       data, _status_code, _headers = estimate_with_http_info(estimate_request, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -37,7 +37,7 @@ module ShipEngine
     # @return [Rate]
     def get(rate_id, opts = {})
       data, _status_code, _headers = get_with_http_info(rate_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 

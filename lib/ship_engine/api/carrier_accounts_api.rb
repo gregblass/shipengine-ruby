@@ -27,7 +27,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def access_worldwide_connect_account(model, opts = {})
       data, _status_code, _headers = access_worldwide_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -47,7 +47,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def apc_connect_account(model, opts = {})
       data, _status_code, _headers = apc_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -67,7 +67,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def asendia_connect_account(model, opts = {})
       data, _status_code, _headers = asendia_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -87,7 +87,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def dhl_express_connect_account(model, opts = {})
       data, _status_code, _headers = dhl_express_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -118,7 +118,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def endicia_connect_account(model, opts = {})
       data, _status_code, _headers = endicia_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -138,7 +138,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def fedex_connect_account(model, opts = {})
       data, _status_code, _headers = fedex_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -169,7 +169,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def first_mile_connect_account(model, opts = {})
       data, _status_code, _headers = first_mile_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -189,7 +189,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def globegistics_connect_account(model, opts = {})
       data, _status_code, _headers = globegistics_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -209,7 +209,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def imex_connect_account(model, opts = {})
       data, _status_code, _headers = imex_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -229,7 +229,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def on_trac_connect_account(model, opts = {})
       data, _status_code, _headers = on_trac_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -249,7 +249,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def rr_donnelley_connect_account(model, opts = {})
       data, _status_code, _headers = rr_donnelley_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -269,7 +269,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def stamps_connect_account(model, opts = {})
       data, _status_code, _headers = stamps_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -289,7 +289,7 @@ module ShipEngine
     # @return [ConnectAccountResponseDTO]
     def ups_connect_account(model, opts = {})
       data, _status_code, _headers = ups_connect_account_with_http_info(model, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 

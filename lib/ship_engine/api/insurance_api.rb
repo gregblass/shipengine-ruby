@@ -27,7 +27,7 @@ module ShipEngine
     # @return [MoneyDTO]
     def add_funds(cost, opts = {})
       data, _status_code, _headers = add_funds_with_http_info(cost, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -36,7 +36,7 @@ module ShipEngine
     # @return [MoneyDTO]
     def get_balance(opts = {})
       data, _status_code, _headers = get_balance_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     private

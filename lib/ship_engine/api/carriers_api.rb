@@ -27,7 +27,7 @@ module ShipEngine
     # @return [Carrier]
     def get(carrier_id, opts = {})
       data, _status_code, _headers = get_with_http_info(carrier_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -37,7 +37,7 @@ module ShipEngine
     # @return [CarrierListOptionsResponse]
     def get_options(carrier_id, opts = {})
       data, _status_code, _headers = get_options_with_http_info(carrier_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -46,7 +46,7 @@ module ShipEngine
     # @return [CarrierListResponse]
     def list(opts = {})
       data, _status_code, _headers = list_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -56,7 +56,7 @@ module ShipEngine
     # @return [CarrierListPackagesResponse]
     def list_packages(carrier_id, opts = {})
       data, _status_code, _headers = list_packages_with_http_info(carrier_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -66,7 +66,7 @@ module ShipEngine
     # @return [CarrierListServicesResponse]
     def list_services(carrier_id, opts = {})
       data, _status_code, _headers = list_services_with_http_info(carrier_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     private

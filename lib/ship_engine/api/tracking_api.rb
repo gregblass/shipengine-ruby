@@ -50,7 +50,7 @@ module ShipEngine
     # @return [TrackingInformation]
     def track(opts = {})
       data, _status_code, _headers = track_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     private

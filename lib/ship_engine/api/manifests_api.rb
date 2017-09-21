@@ -27,7 +27,7 @@ module ShipEngine
     # @return [Manifest]
     def create(request, opts = {})
       data, _status_code, _headers = create_with_http_info(request, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -37,7 +37,7 @@ module ShipEngine
     # @return [Manifest]
     def get(manifest_id, opts = {})
       data, _status_code, _headers = get_with_http_info(manifest_id, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -54,7 +54,7 @@ module ShipEngine
     # @return [ManifestsListResponse]
     def list(opts = {})
       data, _status_code, _headers = list_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     private

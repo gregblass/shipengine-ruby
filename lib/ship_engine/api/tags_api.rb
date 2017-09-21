@@ -37,7 +37,7 @@ module ShipEngine
     # @return [ListTagResponse]
     def delete(tag_name, opts = {})
       data, _status_code, _headers = delete_with_http_info(tag_name, opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -46,7 +46,7 @@ module ShipEngine
     # @return [ListTagResponse]
     def list(opts = {})
       data, _status_code, _headers = list_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 

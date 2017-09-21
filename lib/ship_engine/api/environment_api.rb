@@ -26,7 +26,7 @@ module ShipEngine
     # @return [Object]
     def webhooks(opts = {})
       data, _status_code, _headers = webhooks_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     # 
@@ -35,7 +35,7 @@ module ShipEngine
     # @return [Object]
     def whoami(opts = {})
       data, _status_code, _headers = whoami_with_http_info(opts)
-      return data
+      return { body: data.to_hash, status_code: _status_code, headers: _headers }
     end
 
     private
