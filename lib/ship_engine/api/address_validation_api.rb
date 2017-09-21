@@ -27,7 +27,7 @@ module ShipEngine
     # @return [Array<AddressValidationResponseDTO>]
     def validate_addresses(addresses, opts = {})
       data, _status_code, _headers = validate_addresses_with_http_info(addresses, opts)
-      return { body: data.to_hash, status_code: _status_code, headers: _headers }
+      return { body: data.map(&:to_hash), status_code: _status_code, headers: _headers }
     end
 
     private

@@ -65,8 +65,7 @@ describe 'LabelsApi' do
           @instance.list(list_stamps_priority_labels)
         end
 
-      expect(response).to be_instance_of ShipEngine::ListLabelResponse
-      expect(response.to_hash).to eq list_labels
+      expect(response).to eq list_labels
     end
   end
 
@@ -83,8 +82,7 @@ describe 'LabelsApi' do
           @instance.purchase_label(shipment_domestic_commercial_address)
         end
 
-      expect(response).to be_instance_of ShipEngine::Label
-      expect(response.to_hash).to eq purchase_label_domestic_commercial_address
+      expect(response).to eq purchase_label_domestic_commercial_address
     end
   end
 

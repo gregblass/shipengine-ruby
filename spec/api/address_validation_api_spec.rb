@@ -42,9 +42,7 @@ describe 'AddressValidationApi' do
           @instance.validate_addresses(address)
         end
 
-      expect(response).to be_instance_of Array
-      expect(response.first).to be_instance_of ShipEngine::AddressValidationResponseDTO
-      expect(response.first.to_hash).to eq verified_response
+      expect(response).to eq verified_response
     end
   end
 

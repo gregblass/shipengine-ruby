@@ -26,7 +26,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 18 Sep 2017 22:49:31 GMT
+      - Thu, 21 Sep 2017 16:17:59 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -34,12 +34,12 @@ http_interactions:
       Connection:
       - keep-alive
       X-Shipengine-Requestid:
-      - f54e63a0-6a90-41d9-9aa8-861557cc5d70
+      - 303f7c4f-323f-4c09-a535-7760cd00d343
     body:
       encoding: UTF-8
-      string: "{\r\n  \"label_id\": \"se-test-145280020\",\r\n  \"status\": \"processing\",\r\n
-        \ \"shipment_id\": \"se-145280020\",\r\n  \"ship_date\": \"2017-09-18T00:00:00Z\",\r\n
-        \ \"created_at\": \"2017-09-18T22:49:31.8605912Z\",\r\n  \"shipment_cost\":
+      string: "{\r\n  \"label_id\": \"se-test-146538418\",\r\n  \"status\": \"processing\",\r\n
+        \ \"shipment_id\": \"se-146538418\",\r\n  \"ship_date\": \"2017-09-21T00:00:00Z\",\r\n
+        \ \"created_at\": \"2017-09-21T16:17:58.9148464Z\",\r\n  \"shipment_cost\":
         {\r\n    \"currency\": \"usd\",\r\n    \"amount\": 0.0\r\n  },\r\n  \"insurance_cost\":
         {\r\n    \"currency\": \"usd\",\r\n    \"amount\": 0.0\r\n  },\r\n  \"tracking_number\":
         \"9999999999999\",\r\n  \"is_return_label\": false,\r\n  \"is_international\":
@@ -48,8 +48,8 @@ http_interactions:
         false,\r\n  \"voided_at\": null,\r\n  \"label_format\": \"pdf\",\r\n  \"label_layout\":
         \"4x6\",\r\n  \"trackable\": true,\r\n  \"carrier_code\": \"stamps_com\",\r\n
         \ \"tracking_status\": \"unknown\",\r\n  \"label_download\": {\r\n    \"href\":
-        \"https://api.shipengine.com/v1/downloads/6/iishP6TXf0CcBjAvWIbJDA/testlabel-145280020.pdf\"\r\n
+        \"https://api.shipengine.com/v1/downloads/6/Sk-Lg-Xf_U-rIDKWEXZuxg/testlabel-146538418.pdf\"\r\n
         \ },\r\n  \"form_download\": null,\r\n  \"insurance_claim\": null\r\n}"
     http_version: 
-  recorded_at: Mon, 18 Sep 2017 22:49:31 GMT
+  recorded_at: Thu, 21 Sep 2017 16:17:59 GMT
 recorded_with: VCR 3.0.3
