@@ -1,4 +1,4 @@
-# ShipEngine::CarrierListPackagesResponse
+# ShipEngineApi::CarrierListPackagesResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,50 +1,52 @@
-# ShipEngine::ShipmentsApi
+# ShipEngineApi::ShipmentsApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_tag**](ShipmentsApi.md#add_tag) | **POST** /v1/shipments/{shipment_id}/tags/{tag} | 
-[**cancel**](ShipmentsApi.md#cancel) | **PUT** /v1/shipments/{shipment_id}/cancel | 
-[**create**](ShipmentsApi.md#create) | **POST** /v1/shipments | 
-[**get**](ShipmentsApi.md#get) | **GET** /v1/shipments/{shipment_id} | 
-[**get_by_external_id**](ShipmentsApi.md#get_by_external_id) | **GET** /v1/shipments/external_shipment_id/{external_shipment_id} | 
-[**get_rates_for_shipment**](ShipmentsApi.md#get_rates_for_shipment) | **GET** /v1/shipments/{shipment_id}/rates | 
-[**list**](ShipmentsApi.md#list) | **GET** /v1/shipments | 
-[**list_errors**](ShipmentsApi.md#list_errors) | **GET** /v1/shipments/{shipment_id}/errors | 
-[**remove_tag**](ShipmentsApi.md#remove_tag) | **DELETE** /v1/shipments/{shipment_id}/tags/{tag} | 
-[**update**](ShipmentsApi.md#update) | **PUT** /v1/shipments/{shipment_id} | 
+[**shipments_add_tag**](ShipmentsApi.md#shipments_add_tag) | **POST** /v1/shipments/{shipment_id}/tags/{tag} | 
+[**shipments_cancel**](ShipmentsApi.md#shipments_cancel) | **PUT** /v1/shipments/{shipment_id}/cancel | 
+[**shipments_create_shipments**](ShipmentsApi.md#shipments_create_shipments) | **POST** /v1/shipments | 
+[**shipments_get**](ShipmentsApi.md#shipments_get) | **GET** /v1/shipments/{shipment_id} | 
+[**shipments_get_by_external_id**](ShipmentsApi.md#shipments_get_by_external_id) | **GET** /v1/shipments/external_shipment_id/{external_shipment_id} | 
+[**shipments_get_rates_for_shipment**](ShipmentsApi.md#shipments_get_rates_for_shipment) | **GET** /v1/shipments/{shipment_id}/rates | 
+[**shipments_list**](ShipmentsApi.md#shipments_list) | **GET** /v1/shipments | 
+[**shipments_list_errors**](ShipmentsApi.md#shipments_list_errors) | **GET** /v1/shipments/{shipment_id}/errors | 
+[**shipments_remove_tag**](ShipmentsApi.md#shipments_remove_tag) | **DELETE** /v1/shipments/{shipment_id}/tags/{tag} | 
+[**shipments_update_shipment**](ShipmentsApi.md#shipments_update_shipment) | **PUT** /v1/shipments/{shipment_id} | 
 
 
-# **add_tag**
-> ShipmentAddTagResponse add_tag(shipment_id, tag)
+# **shipments_add_tag**
+> ShipmentAddTagResponse shipments_add_tag(shipment_id, tag, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
 shipment_id = "shipment_id_example" # String | 
 
 tag = "tag_example" # String | 
 
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
+
 
 begin
-  result = api_instance.add_tag(shipment_id, tag)
+  result = api_instance.shipments_add_tag(shipment_id, tag, api_key)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->add_tag: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_add_tag: #{e}"
 end
 ```
 
@@ -54,6 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
  **tag** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -70,32 +73,34 @@ Name | Type | Description  | Notes
 
 
 
-# **cancel**
-> cancel(shipment_id)
+# **shipments_cancel**
+> shipments_cancel(shipment_id, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
 shipment_id = "shipment_id_example" # String | 
 
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
+
 
 begin
-  api_instance.cancel(shipment_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->cancel: #{e}"
+  api_instance.shipments_cancel(shipment_id, api_key)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_cancel: #{e}"
 end
 ```
 
@@ -104,6 +109,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -120,33 +126,35 @@ nil (empty response body)
 
 
 
-# **create**
-> CreateShipmentsResponse create(shipments_request)
+# **shipments_create_shipments**
+> CreateShipmentsResponse shipments_create_shipments(shipments_request, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
-shipments_request = ShipEngine::CreateShipmentsRequest.new # CreateShipmentsRequest | 
+shipments_request = ShipEngineApi::CreateShipmentsRequest.new # CreateShipmentsRequest | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 
 begin
-  result = api_instance.create(shipments_request)
+  result = api_instance.shipments_create_shipments(shipments_request, api_key)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->create: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_create_shipments: #{e}"
 end
 ```
 
@@ -155,6 +163,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipments_request** | [**CreateShipmentsRequest**](CreateShipmentsRequest.md)|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -171,33 +180,35 @@ Name | Type | Description  | Notes
 
 
 
-# **get**
-> Shipment get(shipment_id)
+# **shipments_get**
+> Shipment shipments_get(shipment_id, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
 shipment_id = "shipment_id_example" # String | 
 
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
+
 
 begin
-  result = api_instance.get(shipment_id)
+  result = api_instance.shipments_get(shipment_id, api_key)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->get: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_get: #{e}"
 end
 ```
 
@@ -206,6 +217,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -222,33 +234,35 @@ Name | Type | Description  | Notes
 
 
 
-# **get_by_external_id**
-> Shipment get_by_external_id(external_shipment_id)
+# **shipments_get_by_external_id**
+> Shipment shipments_get_by_external_id(external_shipment_id, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
 external_shipment_id = "external_shipment_id_example" # String | 
 
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
+
 
 begin
-  result = api_instance.get_by_external_id(external_shipment_id)
+  result = api_instance.shipments_get_by_external_id(external_shipment_id, api_key)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->get_by_external_id: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_get_by_external_id: #{e}"
 end
 ```
 
@@ -257,6 +271,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_shipment_id** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -273,36 +288,38 @@ Name | Type | Description  | Notes
 
 
 
-# **get_rates_for_shipment**
-> RateResponse get_rates_for_shipment(shipment_id, opts)
+# **shipments_get_rates_for_shipment**
+> RateResponse shipments_get_rates_for_shipment(shipment_id, api_key, opts)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
 shipment_id = "shipment_id_example" # String | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 opts = { 
   created_at_start: DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
 }
 
 begin
-  result = api_instance.get_rates_for_shipment(shipment_id, opts)
+  result = api_instance.shipments_get_rates_for_shipment(shipment_id, api_key, opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->get_rates_for_shipment: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_get_rates_for_shipment: #{e}"
 end
 ```
 
@@ -311,6 +328,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
  **created_at_start** | **DateTime**|  | [optional] 
 
 ### Return type
@@ -328,24 +346,26 @@ Name | Type | Description  | Notes
 
 
 
-# **list**
-> ListShipmentResponse list(opts)
+# **shipments_list**
+> ListShipmentResponse shipments_list(api_key, opts)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 opts = { 
   batch_id: "batch_id_example", # String | 
@@ -362,10 +382,10 @@ opts = {
 }
 
 begin
-  result = api_instance.list(opts)
+  result = api_instance.shipments_list(api_key, opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->list: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_list: #{e}"
 end
 ```
 
@@ -373,6 +393,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
  **batch_id** | **String**|  | [optional] 
  **tag** | **String**|  | [optional] 
  **shipment_status** | **String**|  | [optional] 
@@ -400,26 +421,28 @@ Name | Type | Description  | Notes
 
 
 
-# **list_errors**
-> ShipmentResponseErrors list_errors(shipment_id, opts)
+# **shipments_list_errors**
+> ShipmentResponseErrors shipments_list_errors(shipment_id, api_key, opts)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
 shipment_id = "shipment_id_example" # String | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 opts = { 
   page: 56, # Integer | 
@@ -427,10 +450,10 @@ opts = {
 }
 
 begin
-  result = api_instance.list_errors(shipment_id, opts)
+  result = api_instance.shipments_list_errors(shipment_id, api_key, opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->list_errors: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_list_errors: #{e}"
 end
 ```
 
@@ -439,6 +462,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
  **page** | **Integer**|  | [optional] 
  **pagesize** | **Integer**|  | [optional] 
 
@@ -457,34 +481,36 @@ Name | Type | Description  | Notes
 
 
 
-# **remove_tag**
-> remove_tag(shipment_id, tag)
+# **shipments_remove_tag**
+> shipments_remove_tag(shipment_id, tag, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
 shipment_id = "shipment_id_example" # String | 
 
 tag = "tag_example" # String | 
 
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
+
 
 begin
-  api_instance.remove_tag(shipment_id, tag)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->remove_tag: #{e}"
+  api_instance.shipments_remove_tag(shipment_id, tag, api_key)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_remove_tag: #{e}"
 end
 ```
 
@@ -494,6 +520,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
  **tag** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -510,34 +537,37 @@ nil (empty response body)
 
 
 
-# **update**
-> update(shipment_id, shipment)
+# **shipments_update_shipment**
+> CreateShipmentResponse shipments_update_shipment(shipment_id, shipment, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
 shipment_id = "shipment_id_example" # String | 
 
-shipment = ShipEngine::AddressValidatingShipment.new # AddressValidatingShipment | 
+shipment = ShipEngineApi::AddressValidatingShipment.new # AddressValidatingShipment | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 
 begin
-  api_instance.update(shipment_id, shipment)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->update: #{e}"
+  result = api_instance.shipments_update_shipment(shipment_id, shipment, api_key)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->shipments_update_shipment: #{e}"
 end
 ```
 
@@ -547,10 +577,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
  **shipment** | [**AddressValidatingShipment**](AddressValidatingShipment.md)|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
-nil (empty response body)
+[**CreateShipmentResponse**](CreateShipmentResponse.md)
 
 ### Authorization
 

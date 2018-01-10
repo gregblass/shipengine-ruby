@@ -1,8 +1,10 @@
-# ShipEngine::Batch
+# ShipEngineApi::Batch
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**label_layout** | **String** |  | [optional] 
+**label_format** | **String** |  | [optional] 
 **batch_id** | **String** |  | [optional] 
 **external_batch_id** | **String** |  | [optional] 
 **batch_notes** | **String** |  | [optional] 

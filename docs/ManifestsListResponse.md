@@ -1,4 +1,4 @@
-# ShipEngine::ManifestsListResponse
+# ShipEngineApi::ManifestsListResponse
 
 ## Properties
 Name | Type | Description | Notes

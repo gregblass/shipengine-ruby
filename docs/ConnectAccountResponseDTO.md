@@ -1,4 +1,4 @@
-# ShipEngine::ConnectAccountResponseDTO
+# ShipEngineApi::ConnectAccountResponseDTO
 
 ## Properties
 Name | Type | Description | Notes

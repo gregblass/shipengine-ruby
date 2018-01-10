@@ -1,4 +1,4 @@
-# ShipEngine::ApiErrorDTO
+# ShipEngineApi::ApiErrorDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShipEngine::Rate
+# ShipEngineApi::Rate
 
 ## Properties
 Name | Type | Description | Notes

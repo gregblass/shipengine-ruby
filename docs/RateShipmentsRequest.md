@@ -1,4 +1,4 @@
-# ShipEngine::RateShipmentsRequest
+# ShipEngineApi::RateShipmentsRequest
 
 ## Properties
 Name | Type | Description | Notes

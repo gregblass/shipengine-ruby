@@ -1,4 +1,4 @@
-# ShipEngine::AddressValidationResponseDTO
+# ShipEngineApi::AddressValidationResponseDTO
 
 ## Properties
 Name | Type | Description | Notes

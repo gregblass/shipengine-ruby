@@ -1,4 +1,4 @@
-# ShipEngine::FirstMileAccountInformationDTO
+# ShipEngineApi::FirstMileAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

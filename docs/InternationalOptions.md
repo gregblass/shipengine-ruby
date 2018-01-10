@@ -1,4 +1,4 @@
-# ShipEngine::InternationalOptions
+# ShipEngineApi::InternationalOptions
 
 ## Properties
 Name | Type | Description | Notes

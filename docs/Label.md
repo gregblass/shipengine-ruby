@@ -1,4 +1,4 @@
-# ShipEngine::Label
+# ShipEngineApi::Label
 
 ## Properties
 Name | Type | Description | Notes
@@ -27,5 +27,6 @@ Name | Type | Description | Notes
 **label_download** | [**LinkDTO**](LinkDTO.md) |  | [optional] 
 **form_download** | [**LinkDTO**](LinkDTO.md) |  | [optional] 
 **insurance_claim** | [**LinkDTO**](LinkDTO.md) |  | [optional] 
+**packages** | [**Array&lt;LabelPackage&gt;**](LabelPackage.md) |  | [optional] 
 
 

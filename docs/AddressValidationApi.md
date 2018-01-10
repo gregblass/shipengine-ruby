@@ -1,39 +1,41 @@
-# ShipEngine::AddressValidationApi
+# ShipEngineApi::AddressValidationApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**validate_addresses**](AddressValidationApi.md#validate_addresses) | **POST** /v1/addresses/validate | 
+[**address_validation_validate_addresses**](AddressValidationApi.md#address_validation_validate_addresses) | **POST** /v1/addresses/validate | 
 
 
-# **validate_addresses**
-> Array&lt;AddressValidationResponseDTO&gt; validate_addresses(addresses)
+# **address_validation_validate_addresses**
+> Array&lt;AddressValidationResponseDTO&gt; address_validation_validate_addresses(addresses, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::AddressValidationApi.new
+api_instance = ShipEngineApi::AddressValidationApi.new
 
-addresses = [ShipEngine::AddressDTO.new] # Array<AddressDTO> | 
+addresses = [ShipEngineApi::AddressDTO.new] # Array<AddressDTO> | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 
 begin
-  result = api_instance.validate_addresses(addresses)
+  result = api_instance.address_validation_validate_addresses(addresses, api_key)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling AddressValidationApi->validate_addresses: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling AddressValidationApi->address_validation_validate_addresses: #{e}"
 end
 ```
 
@@ -42,6 +44,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addresses** | [**Array&lt;AddressDTO&gt;**](AddressDTO.md)|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 

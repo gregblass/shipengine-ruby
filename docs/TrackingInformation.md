@@ -1,4 +1,4 @@
-# ShipEngine::TrackingInformation
+# ShipEngineApi::TrackingInformation
 
 ## Properties
 Name | Type | Description | Notes

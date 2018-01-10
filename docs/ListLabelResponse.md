@@ -1,4 +1,4 @@
-# ShipEngine::ListLabelResponse
+# ShipEngineApi::ListLabelResponse
 
 ## Properties
 Name | Type | Description | Notes

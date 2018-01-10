@@ -1,4 +1,4 @@
-# ShipEngine::CreateShipmentsRequest
+# ShipEngineApi::CreateShipmentsRequest
 
 ## Properties
 Name | Type | Description | Notes

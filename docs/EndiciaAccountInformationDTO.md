@@ -1,4 +1,4 @@
-# ShipEngine::EndiciaAccountInformationDTO
+# ShipEngineApi::EndiciaAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

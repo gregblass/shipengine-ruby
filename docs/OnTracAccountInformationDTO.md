@@ -1,4 +1,4 @@
-# ShipEngine::OnTracAccountInformationDTO
+# ShipEngineApi::OnTracAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

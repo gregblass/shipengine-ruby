@@ -1,4 +1,4 @@
-# ShipEngine::StampsAccountInformationDTO
+# ShipEngineApi::StampsAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

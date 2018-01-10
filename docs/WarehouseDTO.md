@@ -1,4 +1,4 @@
-# ShipEngine::WarehouseDTO
+# ShipEngineApi::WarehouseDTO
 
 ## Properties
 Name | Type | Description | Notes

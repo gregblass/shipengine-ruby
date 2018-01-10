@@ -1,4 +1,4 @@
-# ShipEngine::ShipmentPackage
+# ShipEngineApi::ShipmentPackage
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **weight** | [**Weight**](Weight.md) |  | [optional] 
 **dimensions** | [**Dimensions**](Dimensions.md) |  | [optional] 
 **insured_value** | [**MoneyDTO**](MoneyDTO.md) |  | [optional] 
+**label_messages** | [**LabelMessages**](LabelMessages.md) |  | [optional] 
 
 

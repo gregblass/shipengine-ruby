@@ -1,4 +1,4 @@
-# ShipEngine::ImexAccountInformationDTO
+# ShipEngineApi::ImexAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

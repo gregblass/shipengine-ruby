@@ -1,0 +1,119 @@
+{
+  "carrier_id": "se-136584",
+  "carrier_code": "newgistics",
+  "account_number": "2577",
+  "requires_funded_amount": false,
+  "balance": 0.0,
+  "nickname": "Tobi Shipping",
+  "friendly_name": "Newgistics",
+  "primary": true,
+  "has_multi_package_supporting_services": false,
+  "supports_label_messages": false,
+  "services": [
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "first_class_mail",
+      "name": "First Class Mail",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    },
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "first_class_mail_packages",
+      "name": "First Class Mail Packages",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    },
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "parcel_return_service",
+      "name": "Parcel Return Service",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    },
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "priority_mail",
+      "name": "Priority Mail",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    },
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "standard_post",
+      "name": "Standard Post",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    },
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "bound_printed_matter",
+      "name": "Bound Printed Matter",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    },
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "media_mail",
+      "name": "Media Mail",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    },
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "parcel_select",
+      "name": "Parcel Select",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    },
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "parcel_select_lightweight",
+      "name": "Parcel Select Lightweight",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    },
+    {
+      "carrier_id": "se-136584",
+      "carrier_code": "newgistics",
+      "service_code": "standard_mail_marketing",
+      "name": "Standard Mail Marketing",
+      "domestic": true,
+      "international": false,
+      "is_multi_package_supported": false
+    }
+  ],
+  "packages": [
+    {
+      "package_id": null,
+      "package_code": "package",
+      "name": "Package",
+      "description": "Package. Longest side plus the distance around the thickest part is less than or equal to 84\""
+    }
+  ],
+  "options": [
+    {
+      "name": "non_machinable",
+      "default_value": "false",
+      "description": ""
+    }
+  ]
+}

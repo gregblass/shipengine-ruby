@@ -1,4 +1,4 @@
-# ShipEngine::ListBatchResponse
+# ShipEngineApi::ListBatchResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShipEngine::RrDonnelleyAccountInformationDTO
+# ShipEngineApi::RrDonnelleyAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

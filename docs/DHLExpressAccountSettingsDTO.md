@@ -1,4 +1,4 @@
-# ShipEngine::DHLExpressAccountSettingsDTO
+# ShipEngineApi::DHLExpressAccountSettingsDTO
 
 ## Properties
 Name | Type | Description | Notes

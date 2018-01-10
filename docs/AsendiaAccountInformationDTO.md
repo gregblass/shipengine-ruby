@@ -1,4 +1,4 @@
-# ShipEngine::AsendiaAccountInformationDTO
+# ShipEngineApi::AsendiaAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

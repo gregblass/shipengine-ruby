@@ -1,4 +1,4 @@
-# ShipEngine::ProviderError
+# ShipEngineApi::ProviderError
 
 ## Properties
 Name | Type | Description | Notes

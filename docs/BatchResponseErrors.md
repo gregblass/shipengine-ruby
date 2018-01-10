@@ -1,4 +1,4 @@
-# ShipEngine::BatchResponseErrors
+# ShipEngineApi::BatchResponseErrors
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShipEngine::PaginationLinkDTO
+# ShipEngineApi::PaginationLinkDTO
 
 ## Properties
 Name | Type | Description | Notes

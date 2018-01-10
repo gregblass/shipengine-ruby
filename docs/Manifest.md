@@ -1,4 +1,4 @@
-# ShipEngine::Manifest
+# ShipEngineApi::Manifest
 
 ## Properties
 Name | Type | Description | Notes

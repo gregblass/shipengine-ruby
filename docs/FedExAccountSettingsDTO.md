@@ -1,4 +1,4 @@
-# ShipEngine::FedExAccountSettingsDTO
+# ShipEngineApi::FedExAccountSettingsDTO
 
 ## Properties
 Name | Type | Description | Notes

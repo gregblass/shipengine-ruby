@@ -1,4 +1,4 @@
-# ShipEngine::Weight
+# ShipEngineApi::Weight
 
 ## Properties
 Name | Type | Description | Notes

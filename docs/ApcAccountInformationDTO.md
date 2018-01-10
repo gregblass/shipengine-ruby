@@ -1,4 +1,4 @@
-# ShipEngine::ApcAccountInformationDTO
+# ShipEngineApi::ApcAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

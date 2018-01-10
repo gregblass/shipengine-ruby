@@ -1,41 +1,43 @@
-# ShipEngine::ManifestsApi
+# ShipEngineApi::ManifestsApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create**](ManifestsApi.md#create) | **POST** /v1/manifests | 
-[**get**](ManifestsApi.md#get) | **GET** /v1/manifests/{manifest_id} | 
-[**list**](ManifestsApi.md#list) | **GET** /v1/manifests | 
+[**manifests_create**](ManifestsApi.md#manifests_create) | **POST** /v1/manifests | 
+[**manifests_get**](ManifestsApi.md#manifests_get) | **GET** /v1/manifests/{manifest_id} | 
+[**manifests_list**](ManifestsApi.md#manifests_list) | **GET** /v1/manifests | 
 
 
-# **create**
-> Manifest create(request)
+# **manifests_create**
+> Manifest manifests_create(request, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ManifestsApi.new
+api_instance = ShipEngineApi::ManifestsApi.new
 
-request = ShipEngine::CreateManifestRequest.new # CreateManifestRequest | 
+request = ShipEngineApi::CreateManifestRequest.new # CreateManifestRequest | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 
 begin
-  result = api_instance.create(request)
+  result = api_instance.manifests_create(request, api_key)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ManifestsApi->create: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ManifestsApi->manifests_create: #{e}"
 end
 ```
 
@@ -44,6 +46,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CreateManifestRequest**](CreateManifestRequest.md)|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -60,33 +63,35 @@ Name | Type | Description  | Notes
 
 
 
-# **get**
-> Manifest get(manifest_id)
+# **manifests_get**
+> Manifest manifests_get(manifest_id, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ManifestsApi.new
+api_instance = ShipEngineApi::ManifestsApi.new
 
 manifest_id = "manifest_id_example" # String | 
 
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
+
 
 begin
-  result = api_instance.get(manifest_id)
+  result = api_instance.manifests_get(manifest_id, api_key)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ManifestsApi->get: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ManifestsApi->manifests_get: #{e}"
 end
 ```
 
@@ -95,6 +100,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **manifest_id** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -111,24 +117,26 @@ Name | Type | Description  | Notes
 
 
 
-# **list**
-> ManifestsListResponse list(opts)
+# **manifests_list**
+> ManifestsListResponse manifests_list(api_key, opts)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ManifestsApi.new
+api_instance = ShipEngineApi::ManifestsApi.new
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 opts = { 
   warehouse_id: "warehouse_id_example", # String | 
@@ -142,10 +150,10 @@ opts = {
 }
 
 begin
-  result = api_instance.list(opts)
+  result = api_instance.manifests_list(api_key, opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ManifestsApi->list: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ManifestsApi->manifests_list: #{e}"
 end
 ```
 
@@ -153,6 +161,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
  **warehouse_id** | **String**|  | [optional] 
  **ship_date_start** | **DateTime**|  | [optional] 
  **ship_date_end** | **DateTime**|  | [optional] 

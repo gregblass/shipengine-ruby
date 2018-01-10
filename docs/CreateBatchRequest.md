@@ -1,4 +1,4 @@
-# ShipEngine::CreateBatchRequest
+# ShipEngineApi::CreateBatchRequest
 
 ## Properties
 Name | Type | Description | Notes

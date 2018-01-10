@@ -1,4 +1,4 @@
-# ShipEngine::VoidLabelResponse
+# ShipEngineApi::VoidLabelResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,47 +1,49 @@
-# ShipEngine::BatchesApi
+# ShipEngineApi::BatchesApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_to_batch**](BatchesApi.md#add_to_batch) | **POST** /v1/batches/{batch_id}/add | 
-[**create**](BatchesApi.md#create) | **POST** /v1/batches | 
-[**get**](BatchesApi.md#get) | **GET** /v1/batches/{batch_id} | 
-[**get_by_external_id**](BatchesApi.md#get_by_external_id) | **GET** /v1/batches/external_batch_id/{external_batch_id} | 
-[**list**](BatchesApi.md#list) | **GET** /v1/batches | 
-[**list_errors**](BatchesApi.md#list_errors) | **GET** /v1/batches/{batch_id}/errors | 
-[**process**](BatchesApi.md#process) | **POST** /v1/batches/{batch_id}/process/labels | 
-[**remove_from_batch**](BatchesApi.md#remove_from_batch) | **POST** /v1/batches/{batch_id}/remove | 
+[**batches_add_to_batch**](BatchesApi.md#batches_add_to_batch) | **POST** /v1/batches/{batch_id}/add | 
+[**batches_create**](BatchesApi.md#batches_create) | **POST** /v1/batches | 
+[**batches_get**](BatchesApi.md#batches_get) | **GET** /v1/batches/{batch_id} | 
+[**batches_get_by_external_id**](BatchesApi.md#batches_get_by_external_id) | **GET** /v1/batches/external_batch_id/{external_batch_id} | 
+[**batches_list**](BatchesApi.md#batches_list) | **GET** /v1/batches | 
+[**batches_list_errors**](BatchesApi.md#batches_list_errors) | **GET** /v1/batches/{batch_id}/errors | 
+[**batches_process**](BatchesApi.md#batches_process) | **POST** /v1/batches/{batch_id}/process/labels | 
+[**batches_remove_from_batch**](BatchesApi.md#batches_remove_from_batch) | **POST** /v1/batches/{batch_id}/remove | 
 
 
-# **add_to_batch**
-> add_to_batch(batch_id, request)
+# **batches_add_to_batch**
+> batches_add_to_batch(batch_id, request, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::BatchesApi.new
+api_instance = ShipEngineApi::BatchesApi.new
 
 batch_id = "batch_id_example" # String | 
 
-request = ShipEngine::ModifyBatchRequest.new # ModifyBatchRequest | 
+request = ShipEngineApi::ModifyBatchRequest.new # ModifyBatchRequest | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 
 begin
-  api_instance.add_to_batch(batch_id, request)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling BatchesApi->add_to_batch: #{e}"
+  api_instance.batches_add_to_batch(batch_id, request, api_key)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling BatchesApi->batches_add_to_batch: #{e}"
 end
 ```
 
@@ -51,6 +53,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **String**|  | 
  **request** | [**ModifyBatchRequest**](ModifyBatchRequest.md)|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -67,33 +70,35 @@ nil (empty response body)
 
 
 
-# **create**
-> Batch create(request)
+# **batches_create**
+> Batch batches_create(request, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::BatchesApi.new
+api_instance = ShipEngineApi::BatchesApi.new
 
-request = ShipEngine::CreateBatchRequest.new # CreateBatchRequest | 
+request = ShipEngineApi::CreateBatchRequest.new # CreateBatchRequest | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 
 begin
-  result = api_instance.create(request)
+  result = api_instance.batches_create(request, api_key)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling BatchesApi->create: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling BatchesApi->batches_create: #{e}"
 end
 ```
 
@@ -102,6 +107,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **request** | [**CreateBatchRequest**](CreateBatchRequest.md)|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -118,33 +124,35 @@ Name | Type | Description  | Notes
 
 
 
-# **get**
-> Batch get(batch_id)
+# **batches_get**
+> Batch batches_get(batch_id, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::BatchesApi.new
+api_instance = ShipEngineApi::BatchesApi.new
 
 batch_id = "batch_id_example" # String | 
 
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
+
 
 begin
-  result = api_instance.get(batch_id)
+  result = api_instance.batches_get(batch_id, api_key)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling BatchesApi->get: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling BatchesApi->batches_get: #{e}"
 end
 ```
 
@@ -153,6 +161,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -169,32 +178,34 @@ Name | Type | Description  | Notes
 
 
 
-# **get_by_external_id**
-> get_by_external_id(external_batch_id)
+# **batches_get_by_external_id**
+> batches_get_by_external_id(external_batch_id, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::BatchesApi.new
+api_instance = ShipEngineApi::BatchesApi.new
 
 external_batch_id = "external_batch_id_example" # String | 
 
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
+
 
 begin
-  api_instance.get_by_external_id(external_batch_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling BatchesApi->get_by_external_id: #{e}"
+  api_instance.batches_get_by_external_id(external_batch_id, api_key)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling BatchesApi->batches_get_by_external_id: #{e}"
 end
 ```
 
@@ -203,6 +214,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **external_batch_id** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -219,24 +231,26 @@ nil (empty response body)
 
 
 
-# **list**
-> ListBatchResponse list(opts)
+# **batches_list**
+> ListBatchResponse batches_list(api_key, opts)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::BatchesApi.new
+api_instance = ShipEngineApi::BatchesApi.new
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 opts = { 
   status: "status_example", # String | 
@@ -247,10 +261,10 @@ opts = {
 }
 
 begin
-  result = api_instance.list(opts)
+  result = api_instance.batches_list(api_key, opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling BatchesApi->list: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling BatchesApi->batches_list: #{e}"
 end
 ```
 
@@ -258,6 +272,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
  **status** | **String**|  | [optional] 
  **page** | **Integer**|  | [optional] 
  **page_size** | **Integer**|  | [optional] 
@@ -279,26 +294,28 @@ Name | Type | Description  | Notes
 
 
 
-# **list_errors**
-> BatchResponseErrors list_errors(batch_id, opts)
+# **batches_list_errors**
+> BatchResponseErrors batches_list_errors(batch_id, api_key, opts)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::BatchesApi.new
+api_instance = ShipEngineApi::BatchesApi.new
 
 batch_id = "batch_id_example" # String | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 opts = { 
   page: 56, # Integer | 
@@ -306,10 +323,10 @@ opts = {
 }
 
 begin
-  result = api_instance.list_errors(batch_id, opts)
+  result = api_instance.batches_list_errors(batch_id, api_key, opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling BatchesApi->list_errors: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling BatchesApi->batches_list_errors: #{e}"
 end
 ```
 
@@ -318,6 +335,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **String**|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
  **page** | **Integer**|  | [optional] 
  **pagesize** | **Integer**|  | [optional] 
 
@@ -336,34 +354,36 @@ Name | Type | Description  | Notes
 
 
 
-# **process**
-> process(batch_id, process_batch_request)
+# **batches_process**
+> batches_process(batch_id, process_batch_request, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::BatchesApi.new
+api_instance = ShipEngineApi::BatchesApi.new
 
 batch_id = "batch_id_example" # String | 
 
-process_batch_request = ShipEngine::ProcessBatchRequest.new # ProcessBatchRequest | 
+process_batch_request = ShipEngineApi::ProcessBatchRequest.new # ProcessBatchRequest | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 
 begin
-  api_instance.process(batch_id, process_batch_request)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling BatchesApi->process: #{e}"
+  api_instance.batches_process(batch_id, process_batch_request, api_key)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling BatchesApi->batches_process: #{e}"
 end
 ```
 
@@ -373,6 +393,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **String**|  | 
  **process_batch_request** | [**ProcessBatchRequest**](ProcessBatchRequest.md)|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 
@@ -389,34 +410,36 @@ nil (empty response body)
 
 
 
-# **remove_from_batch**
-> remove_from_batch(batch_id, request)
+# **batches_remove_from_batch**
+> batches_remove_from_batch(batch_id, request, api_key)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::BatchesApi.new
+api_instance = ShipEngineApi::BatchesApi.new
 
 batch_id = "batch_id_example" # String | 
 
-request = ShipEngine::ModifyBatchRequest.new # ModifyBatchRequest | 
+request = ShipEngineApi::ModifyBatchRequest.new # ModifyBatchRequest | 
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 
 begin
-  api_instance.remove_from_batch(batch_id, request)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling BatchesApi->remove_from_batch: #{e}"
+  api_instance.batches_remove_from_batch(batch_id, request, api_key)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling BatchesApi->batches_remove_from_batch: #{e}"
 end
 ```
 
@@ -426,6 +449,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **batch_id** | **String**|  | 
  **request** | [**ModifyBatchRequest**](ModifyBatchRequest.md)|  | 
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
 
 ### Return type
 

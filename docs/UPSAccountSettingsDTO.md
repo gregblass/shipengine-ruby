@@ -1,4 +1,4 @@
-# ShipEngine::UPSAccountSettingsDTO
+# ShipEngineApi::UPSAccountSettingsDTO
 
 ## Properties
 Name | Type | Description | Notes

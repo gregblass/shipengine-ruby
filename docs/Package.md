@@ -1,4 +1,4 @@
-# ShipEngine::Package
+# ShipEngineApi::Package
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShipEngine::MoneyDTO
+# ShipEngineApi::MoneyDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShipEngine::AddressDTO
+# ShipEngineApi::AddressDTO
 
 ## Properties
 Name | Type | Description | Notes

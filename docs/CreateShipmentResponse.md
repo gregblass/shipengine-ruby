@@ -1,4 +1,4 @@
-# ShipEngine::CreateShipmentResponse
+# ShipEngineApi::CreateShipmentResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **advanced_options** | **Hash&lt;String, Object&gt;** |  | [optional] 
 **insurance_provider** | **String** |  | [optional] 
 **tags** | [**Array&lt;TagResponse&gt;**](TagResponse.md) |  | [optional] 
-**total_weight** | [**Weight**](Weight.md) |  | [optional] 
 **packages** | [**Array&lt;ShipmentPackage&gt;**](ShipmentPackage.md) |  | [optional] 
+**total_weight** | [**Weight**](Weight.md) |  | [optional] 
 
 

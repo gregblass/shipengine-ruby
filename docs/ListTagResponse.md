@@ -1,4 +1,4 @@
-# ShipEngine::ListTagResponse
+# ShipEngineApi::ListTagResponse
 
 ## Properties
 Name | Type | Description | Notes

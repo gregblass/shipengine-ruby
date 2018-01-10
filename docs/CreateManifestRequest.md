@@ -1,4 +1,4 @@
-# ShipEngine::CreateManifestRequest
+# ShipEngineApi::CreateManifestRequest
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShipEngine::ShipmentAddTagResponse
+# ShipEngineApi::ShipmentAddTagResponse
 
 ## Properties
 Name | Type | Description | Notes

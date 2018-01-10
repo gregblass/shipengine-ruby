@@ -1,4 +1,4 @@
-# ShipEngine::GlobegisticsAccountInformationDTO
+# ShipEngineApi::GlobegisticsAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

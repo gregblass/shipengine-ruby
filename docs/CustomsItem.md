@@ -1,4 +1,4 @@
-# ShipEngine::CustomsItem
+# ShipEngineApi::CustomsItem
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ShipEngine::CarrierAdvancedOption
+# ShipEngineApi::CarrierAdvancedOption
 
 ## Properties
 Name | Type | Description | Notes

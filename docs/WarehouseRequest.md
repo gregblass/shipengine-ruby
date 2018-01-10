@@ -1,4 +1,4 @@
-# ShipEngine::WarehouseRequest
+# ShipEngineApi::WarehouseRequest
 
 ## Properties
 Name | Type | Description | Notes

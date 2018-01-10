@@ -1,4 +1,4 @@
-# ShipEngine::ShipmentResponseErrors
+# ShipEngineApi::ShipmentResponseErrors
 
 ## Properties
 Name | Type | Description | Notes

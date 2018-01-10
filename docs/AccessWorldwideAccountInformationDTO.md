@@ -1,4 +1,4 @@
-# ShipEngine::AccessWorldwideAccountInformationDTO
+# ShipEngineApi::AccessWorldwideAccountInformationDTO
 
 ## Properties
 Name | Type | Description | Notes

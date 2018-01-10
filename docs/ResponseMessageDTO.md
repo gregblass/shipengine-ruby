@@ -1,4 +1,4 @@
-# ShipEngine::ResponseMessageDTO
+# ShipEngineApi::ResponseMessageDTO
 
 ## Properties
 Name | Type | Description | Notes

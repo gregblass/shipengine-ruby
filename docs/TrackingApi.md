@@ -1,32 +1,34 @@
-# ShipEngine::TrackingApi
+# ShipEngineApi::TrackingApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**start_tracking**](TrackingApi.md#start_tracking) | **POST** /v1/tracking/start | 
-[**stop_tracking**](TrackingApi.md#stop_tracking) | **POST** /v1/tracking/stop | 
-[**track**](TrackingApi.md#track) | **GET** /v1/tracking | 
+[**tracking_start_tracking**](TrackingApi.md#tracking_start_tracking) | **POST** /v1/tracking/start | 
+[**tracking_stop_tracking**](TrackingApi.md#tracking_stop_tracking) | **POST** /v1/tracking/stop | 
+[**tracking_track**](TrackingApi.md#tracking_track) | **GET** /v1/tracking | 
 
 
-# **start_tracking**
-> start_tracking(opts)
+# **tracking_start_tracking**
+> tracking_start_tracking(api_key, opts)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::TrackingApi.new
+api_instance = ShipEngineApi::TrackingApi.new
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 opts = { 
   carrier_code: "carrier_code_example", # String | 
@@ -34,9 +36,9 @@ opts = {
 }
 
 begin
-  api_instance.start_tracking(opts)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling TrackingApi->start_tracking: #{e}"
+  api_instance.tracking_start_tracking(api_key, opts)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling TrackingApi->tracking_start_tracking: #{e}"
 end
 ```
 
@@ -44,6 +46,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
  **carrier_code** | **String**|  | [optional] 
  **tracking_number** | **String**|  | [optional] 
 
@@ -62,24 +65,26 @@ nil (empty response body)
 
 
 
-# **stop_tracking**
-> stop_tracking(opts)
+# **tracking_stop_tracking**
+> tracking_stop_tracking(api_key, opts)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::TrackingApi.new
+api_instance = ShipEngineApi::TrackingApi.new
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 opts = { 
   carrier_code: "carrier_code_example", # String | 
@@ -87,9 +92,9 @@ opts = {
 }
 
 begin
-  api_instance.stop_tracking(opts)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling TrackingApi->stop_tracking: #{e}"
+  api_instance.tracking_stop_tracking(api_key, opts)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling TrackingApi->tracking_stop_tracking: #{e}"
 end
 ```
 
@@ -97,6 +102,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
  **carrier_code** | **String**|  | [optional] 
  **tracking_number** | **String**|  | [optional] 
 
@@ -115,24 +121,26 @@ nil (empty response body)
 
 
 
-# **track**
-> TrackingInformation track(opts)
+# **tracking_track**
+> TrackingInformation tracking_track(api_key, opts)
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::TrackingApi.new
+api_instance = ShipEngineApi::TrackingApi.new
+
+api_key = "jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY" # String | API Key
 
 opts = { 
   carrier_code: "carrier_code_example", # String | 
@@ -140,10 +148,10 @@ opts = {
 }
 
 begin
-  result = api_instance.track(opts)
+  result = api_instance.tracking_track(api_key, opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling TrackingApi->track: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling TrackingApi->tracking_track: #{e}"
 end
 ```
 
@@ -151,6 +159,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **api_key** | **String**| API Key | [default to jHpriMLAiP0f8PszTUn37t4D3+q2lW/G+eaMgGAupBY]
  **carrier_code** | **String**|  | [optional] 
  **tracking_number** | **String**|  | [optional] 
 

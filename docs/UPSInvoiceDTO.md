@@ -1,4 +1,4 @@
-# ShipEngine::UPSInvoiceDTO
+# ShipEngineApi::UPSInvoiceDTO
 
 ## Properties
 Name | Type | Description | Notes

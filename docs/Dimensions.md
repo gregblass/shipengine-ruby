@@ -1,4 +1,4 @@
-# ShipEngine::Dimensions
+# ShipEngineApi::Dimensions
 
 ## Properties
 Name | Type | Description | Notes

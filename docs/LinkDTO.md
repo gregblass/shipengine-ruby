@@ -1,4 +1,4 @@
-# ShipEngine::LinkDTO
+# ShipEngineApi::LinkDTO
 
 ## Properties
 Name | Type | Description | Notes

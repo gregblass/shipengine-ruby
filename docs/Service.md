@@ -1,4 +1,4 @@
-# ShipEngine::Service
+# ShipEngineApi::Service
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **domestic** | **BOOLEAN** |  | [optional] 
 **international** | **BOOLEAN** |  | [optional] 
+**is_multi_package_supported** | **BOOLEAN** |  | [optional] 
 
 
