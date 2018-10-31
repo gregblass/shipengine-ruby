@@ -1,93 +1,45 @@
-# ShipEngine::PackagesApi
+# ShipEngineApi::PackagesApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create**](PackagesApi.md#create) | **POST** /v1/packages | 
-[**delete**](PackagesApi.md#delete) | **DELETE** /v1/packages/{package_id} | 
-[**get**](PackagesApi.md#get) | **GET** /v1/packages/{package_id} | 
-[**list**](PackagesApi.md#list) | **GET** /v1/packages | 
-[**update**](PackagesApi.md#update) | **PUT** /v1/packages/{package_id} | 
+[**v1_packages_by_package_id_delete**](PackagesApi.md#v1_packages_by_package_id_delete) | **DELETE** /v1/packages/{package_id} | packages.delete
+[**v1_packages_by_package_id_get**](PackagesApi.md#v1_packages_by_package_id_get) | **GET** /v1/packages/{package_id} | packages.get_by_id
+[**v1_packages_by_package_id_put**](PackagesApi.md#v1_packages_by_package_id_put) | **PUT** /v1/packages/{package_id} | packages.update
+[**v1_packages_get**](PackagesApi.md#v1_packages_get) | **GET** /v1/packages | packages.find
+[**v1_packages_post**](PackagesApi.md#v1_packages_post) | **POST** /v1/packages | packages.create
 
 
-# **create**
-> Package create(package)
+# **v1_packages_by_package_id_delete**
+> v1_packages_by_package_id_delete(package_id)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::PackagesApi.new
-
-package = ShipEngine::Package.new # Package | 
-
-
-begin
-  result = api_instance.create(package)
-  p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling PackagesApi->create: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **package** | [**Package**](Package.md)|  | 
-
-### Return type
-
-[**Package**](Package.md)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
-
-
-
-# **delete**
-> delete(package_id)
+packages.delete
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::PackagesApi.new
+api_instance = ShipEngineApi::PackagesApi.new
 
-package_id = "package_id_example" # String | 
+package_id = 'package_id_example' # String | 
 
 
 begin
-  api_instance.delete(package_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling PackagesApi->delete: #{e}"
+  #packages.delete
+  api_instance.v1_packages_by_package_id_delete(package_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling PackagesApi->v1_packages_by_package_id_delete: #{e}"
 end
 ```
 
@@ -107,38 +59,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **get**
-> Package get(package_id)
+# **v1_packages_by_package_id_get**
+> Package v1_packages_by_package_id_get(package_id)
+
+packages.get_by_id
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::PackagesApi.new
+api_instance = ShipEngineApi::PackagesApi.new
 
-package_id = "package_id_example" # String | 
+package_id = 'package_id_example' # String | 
 
 
 begin
-  result = api_instance.get(package_id)
+  #packages.get_by_id
+  result = api_instance.v1_packages_by_package_id_get(package_id)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling PackagesApi->get: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling PackagesApi->v1_packages_by_package_id_get: #{e}"
 end
 ```
 
@@ -158,35 +113,94 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **list**
-> PackagesListResponse list
+# **v1_packages_by_package_id_put**
+> v1_packages_by_package_id_put(package_id, body)
+
+packages.update
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::PackagesApi.new
+api_instance = ShipEngineApi::PackagesApi.new
+
+package_id = 'package_id_example' # String | 
+
+body = ShipEngineApi::Package.new # Package | 
+
 
 begin
-  result = api_instance.list
+  #packages.update
+  api_instance.v1_packages_by_package_id_put(package_id, body)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling PackagesApi->v1_packages_by_package_id_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **package_id** | **String**|  | 
+ **body** | [**Package**](Package.md)|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_packages_get**
+> PackageListResponseBody v1_packages_get
+
+packages.find
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::PackagesApi.new
+
+begin
+  #packages.find
+  result = api_instance.v1_packages_get
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling PackagesApi->list: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling PackagesApi->v1_packages_get: #{e}"
 end
 ```
 
@@ -195,7 +209,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**PackagesListResponse**](PackagesListResponse.md)
+[**PackageListResponseBody**](PackageListResponseBody.md)
 
 ### Authorization
 
@@ -203,39 +217,41 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **update**
-> update(package_id, package)
+# **v1_packages_post**
+> Package v1_packages_post(body)
+
+packages.create
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::PackagesApi.new
+api_instance = ShipEngineApi::PackagesApi.new
 
-package_id = "package_id_example" # String | 
-
-package = ShipEngine::Package.new # Package | 
+body = ShipEngineApi::Package.new # Package | 
 
 
 begin
-  api_instance.update(package_id, package)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling PackagesApi->update: #{e}"
+  #packages.create
+  result = api_instance.v1_packages_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling PackagesApi->v1_packages_post: #{e}"
 end
 ```
 
@@ -243,12 +259,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **package_id** | **String**|  | 
- **package** | [**Package**](Package.md)|  | 
+ **body** | [**Package**](Package.md)|  | 
 
 ### Return type
 
-nil (empty response body)
+[**Package**](Package.md)
 
 ### Authorization
 
@@ -256,8 +271,8 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

@@ -1,40 +1,43 @@
-# ShipEngine::InsuranceApi
+# ShipEngineApi::InsuranceApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_funds**](InsuranceApi.md#add_funds) | **PATCH** /v1/insurance/shipsurance/add_funds | 
-[**get_balance**](InsuranceApi.md#get_balance) | **GET** /v1/insurance/shipsurance/balance | 
+[**v1_insurance_shipsurance_add_funds_patch**](InsuranceApi.md#v1_insurance_shipsurance_add_funds_patch) | **PATCH** /v1/insurance/shipsurance/add_funds | insurance.add_funds
+[**v1_insurance_shipsurance_balance_get**](InsuranceApi.md#v1_insurance_shipsurance_balance_get) | **GET** /v1/insurance/shipsurance/balance | insurance.get_balance
 
 
-# **add_funds**
-> MoneyDTO add_funds(cost)
+# **v1_insurance_shipsurance_add_funds_patch**
+> Money v1_insurance_shipsurance_add_funds_patch(body)
+
+insurance.add_funds
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::InsuranceApi.new
+api_instance = ShipEngineApi::InsuranceApi.new
 
-cost = ShipEngine::MoneyDTO.new # MoneyDTO | 
+body = ShipEngineApi::Money.new # Money | 
 
 
 begin
-  result = api_instance.add_funds(cost)
+  #insurance.add_funds
+  result = api_instance.v1_insurance_shipsurance_add_funds_patch(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling InsuranceApi->add_funds: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling InsuranceApi->v1_insurance_shipsurance_add_funds_patch: #{e}"
 end
 ```
 
@@ -42,11 +45,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cost** | [**MoneyDTO**](MoneyDTO.md)|  | 
+ **body** | [**Money**](Money.md)|  | 
 
 ### Return type
 
-[**MoneyDTO**](MoneyDTO.md)
+[**Money**](Money.md)
 
 ### Authorization
 
@@ -54,35 +57,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **get_balance**
-> MoneyDTO get_balance
+# **v1_insurance_shipsurance_balance_get**
+> Money v1_insurance_shipsurance_balance_get
+
+insurance.get_balance
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::InsuranceApi.new
+api_instance = ShipEngineApi::InsuranceApi.new
 
 begin
-  result = api_instance.get_balance
+  #insurance.get_balance
+  result = api_instance.v1_insurance_shipsurance_balance_get
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling InsuranceApi->get_balance: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling InsuranceApi->v1_insurance_shipsurance_balance_get: #{e}"
 end
 ```
 
@@ -91,7 +97,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MoneyDTO**](MoneyDTO.md)
+[**Money**](Money.md)
 
 ### Authorization
 
@@ -99,8 +105,8 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

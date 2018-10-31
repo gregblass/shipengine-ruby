@@ -1,42 +1,45 @@
-# ShipEngine::RatesApi
+# ShipEngineApi::RatesApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**estimate**](RatesApi.md#estimate) | **POST** /v1/rates/estimate | 
-[**get**](RatesApi.md#get) | **GET** /v1/rates/{rate_id} | 
-[**rate_shipment**](RatesApi.md#rate_shipment) | **POST** /v1/rates | 
-[**rate_shipments_async**](RatesApi.md#rate_shipments_async) | **POST** /v1/rates/bulk | 
+[**v1_rates_bulk_post**](RatesApi.md#v1_rates_bulk_post) | **POST** /v1/rates/bulk | rates.bulk_rate_shipments
+[**v1_rates_by_rate_id_get**](RatesApi.md#v1_rates_by_rate_id_get) | **GET** /v1/rates/{rate_id} | rates.get_by_id
+[**v1_rates_estimate_post**](RatesApi.md#v1_rates_estimate_post) | **POST** /v1/rates/estimate | rates.estimate
+[**v1_rates_post**](RatesApi.md#v1_rates_post) | **POST** /v1/rates | rates.rate_shipment
 
 
-# **estimate**
-> Array&lt;Rate&gt; estimate(estimate_request)
+# **v1_rates_bulk_post**
+> Array&lt;BulkRateResponseBody&gt; v1_rates_bulk_post(body)
+
+rates.bulk_rate_shipments
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::RatesApi.new
+api_instance = ShipEngineApi::RatesApi.new
 
-estimate_request = ShipEngine::RateEstimateRequest.new # RateEstimateRequest | 
+body = ShipEngineApi::RateShipmentsRequestBody.new # RateShipmentsRequestBody | 
 
 
 begin
-  result = api_instance.estimate(estimate_request)
+  #rates.bulk_rate_shipments
+  result = api_instance.v1_rates_bulk_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling RatesApi->estimate: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling RatesApi->v1_rates_bulk_post: #{e}"
 end
 ```
 
@@ -44,11 +47,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **estimate_request** | [**RateEstimateRequest**](RateEstimateRequest.md)|  | 
+ **body** | [**RateShipmentsRequestBody**](RateShipmentsRequestBody.md)|  | 
 
 ### Return type
 
-[**Array&lt;Rate&gt;**](Rate.md)
+[**Array&lt;BulkRateResponseBody&gt;**](BulkRateResponseBody.md)
 
 ### Authorization
 
@@ -56,38 +59,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **get**
-> Rate get(rate_id)
+# **v1_rates_by_rate_id_get**
+> Rate v1_rates_by_rate_id_get(rate_id)
+
+rates.get_by_id
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::RatesApi.new
+api_instance = ShipEngineApi::RatesApi.new
 
-rate_id = "rate_id_example" # String | 
+rate_id = 'rate_id_example' # String | 
 
 
 begin
-  result = api_instance.get(rate_id)
+  #rates.get_by_id
+  result = api_instance.v1_rates_by_rate_id_get(rate_id)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling RatesApi->get: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling RatesApi->v1_rates_by_rate_id_get: #{e}"
 end
 ```
 
@@ -107,37 +113,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **rate_shipment**
-> rate_shipment(request)
+# **v1_rates_estimate_post**
+> Array&lt;Rate&gt; v1_rates_estimate_post(body)
+
+rates.estimate
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::RatesApi.new
+api_instance = ShipEngineApi::RatesApi.new
 
-request = ShipEngine::RateShipmentRequest.new # RateShipmentRequest | 
+body = ShipEngineApi::RateEstimateRequestBody.new # RateEstimateRequestBody | 
 
 
 begin
-  api_instance.rate_shipment(request)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling RatesApi->rate_shipment: #{e}"
+  #rates.estimate
+  result = api_instance.v1_rates_estimate_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling RatesApi->v1_rates_estimate_post: #{e}"
 end
 ```
 
@@ -145,11 +155,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**RateShipmentRequest**](RateShipmentRequest.md)|  | 
+ **body** | [**RateEstimateRequestBody**](RateEstimateRequestBody.md)|  | 
 
 ### Return type
 
-nil (empty response body)
+[**Array&lt;Rate&gt;**](Rate.md)
 
 ### Authorization
 
@@ -157,37 +167,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **rate_shipments_async**
-> rate_shipments_async(request)
+# **v1_rates_post**
+> RateShipmentResponseBody v1_rates_post(body)
+
+rates.rate_shipment
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::RatesApi.new
+api_instance = ShipEngineApi::RatesApi.new
 
-request = ShipEngine::RateShipmentsRequest.new # RateShipmentsRequest | 
+body = ShipEngineApi::RateShipmentRequestBody.new # RateShipmentRequestBody | 
 
 
 begin
-  api_instance.rate_shipments_async(request)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling RatesApi->rate_shipments_async: #{e}"
+  #rates.rate_shipment
+  result = api_instance.v1_rates_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling RatesApi->v1_rates_post: #{e}"
 end
 ```
 
@@ -195,11 +209,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**RateShipmentsRequest**](RateShipmentsRequest.md)|  | 
+ **body** | [**RateShipmentRequestBody**](RateShipmentRequestBody.md)|  | 
 
 ### Return type
 
-nil (empty response body)
+[**RateShipmentResponseBody**](RateShipmentResponseBody.md)
 
 ### Authorization
 
@@ -207,8 +221,8 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

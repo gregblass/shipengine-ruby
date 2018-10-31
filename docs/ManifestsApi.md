@@ -1,92 +1,44 @@
-# ShipEngine::ManifestsApi
+# ShipEngineApi::ManifestsApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create**](ManifestsApi.md#create) | **POST** /v1/manifests | 
-[**get**](ManifestsApi.md#get) | **GET** /v1/manifests/{manifest_id} | 
-[**list**](ManifestsApi.md#list) | **GET** /v1/manifests | 
+[**v1_manifests_by_manifest_id_get**](ManifestsApi.md#v1_manifests_by_manifest_id_get) | **GET** /v1/manifests/{manifest_id} | manifests.get_by_id
+[**v1_manifests_get**](ManifestsApi.md#v1_manifests_get) | **GET** /v1/manifests | manifests.find
+[**v1_manifests_post**](ManifestsApi.md#v1_manifests_post) | **POST** /v1/manifests | manifests.create
 
 
-# **create**
-> Manifest create(request)
+# **v1_manifests_by_manifest_id_get**
+> ManifestResponseBody v1_manifests_by_manifest_id_get(manifest_id)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::ManifestsApi.new
-
-request = ShipEngine::CreateManifestRequest.new # CreateManifestRequest | 
-
-
-begin
-  result = api_instance.create(request)
-  p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ManifestsApi->create: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**CreateManifestRequest**](CreateManifestRequest.md)|  | 
-
-### Return type
-
-[**Manifest**](Manifest.md)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
-
-
-
-# **get**
-> Manifest get(manifest_id)
+manifests.get_by_id
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ManifestsApi.new
+api_instance = ShipEngineApi::ManifestsApi.new
 
-manifest_id = "manifest_id_example" # String | 
+manifest_id = 'manifest_id_example' # String | 
 
 
 begin
-  result = api_instance.get(manifest_id)
+  #manifests.get_by_id
+  result = api_instance.v1_manifests_by_manifest_id_get(manifest_id)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ManifestsApi->get: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ManifestsApi->v1_manifests_by_manifest_id_get: #{e}"
 end
 ```
 
@@ -98,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Manifest**](Manifest.md)
+[**ManifestResponseBody**](ManifestResponseBody.md)
 
 ### Authorization
 
@@ -106,46 +58,49 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **list**
-> ManifestsListResponse list(opts)
+# **v1_manifests_get**
+> ListManifestsResponseBody v1_manifests_get(opts)
+
+manifests.find
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ManifestsApi.new
+api_instance = ShipEngineApi::ManifestsApi.new
 
 opts = { 
-  warehouse_id: "warehouse_id_example", # String | 
-  ship_date_start: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | 
-  ship_date_end: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | 
-  created_at_start: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | 
-  created_at_end: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | 
-  carrier_id: "carrier_id_example", # String | 
+  warehouse_id: 'warehouse_id_example', # String | 
+  ship_date_start: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | 
+  ship_date_end: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | 
+  created_at_start: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | 
+  created_at_end: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | 
+  carrier_id: 'carrier_id_example', # String | 
   page: 56, # Integer | 
   page_size: 56 # Integer | 
 }
 
 begin
-  result = api_instance.list(opts)
+  #manifests.find
+  result = api_instance.v1_manifests_get(opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ManifestsApi->list: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ManifestsApi->v1_manifests_get: #{e}"
 end
 ```
 
@@ -164,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ManifestsListResponse**](ManifestsListResponse.md)
+[**ListManifestsResponseBody**](ListManifestsResponseBody.md)
 
 ### Authorization
 
@@ -172,8 +127,62 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_manifests_post**
+> ManifestResponseBody v1_manifests_post(body)
+
+manifests.create
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::ManifestsApi.new
+
+body = ShipEngineApi::CreateManifestRequestBody.new # CreateManifestRequestBody | 
+
+
+begin
+  #manifests.create
+  result = api_instance.v1_manifests_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ManifestsApi->v1_manifests_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CreateManifestRequestBody**](CreateManifestRequestBody.md)|  | 
+
+### Return type
+
+[**ManifestResponseBody**](ManifestResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

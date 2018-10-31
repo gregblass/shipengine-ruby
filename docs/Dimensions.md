@@ -1,9 +1,9 @@
-# ShipEngine::Dimensions
+# ShipEngineApi::Dimensions
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**unit** | **String** |  | [optional] 
+**unit** | [**DimensionUnit**](DimensionUnit.md) |  | [optional] 
 **length** | **Float** |  | [optional] 
 **width** | **Float** |  | [optional] 
 **height** | **Float** |  | [optional] 

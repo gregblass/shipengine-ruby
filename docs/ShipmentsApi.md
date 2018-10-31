@@ -1,50 +1,51 @@
-# ShipEngine::ShipmentsApi
+# ShipEngineApi::ShipmentsApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_tag**](ShipmentsApi.md#add_tag) | **POST** /v1/shipments/{shipment_id}/tags/{tag} | 
-[**cancel**](ShipmentsApi.md#cancel) | **PUT** /v1/shipments/{shipment_id}/cancel | 
-[**create**](ShipmentsApi.md#create) | **POST** /v1/shipments | 
-[**get**](ShipmentsApi.md#get) | **GET** /v1/shipments/{shipment_id} | 
-[**get_by_external_id**](ShipmentsApi.md#get_by_external_id) | **GET** /v1/shipments/external_shipment_id/{external_shipment_id} | 
-[**get_rates_for_shipment**](ShipmentsApi.md#get_rates_for_shipment) | **GET** /v1/shipments/{shipment_id}/rates | 
-[**list**](ShipmentsApi.md#list) | **GET** /v1/shipments | 
-[**list_errors**](ShipmentsApi.md#list_errors) | **GET** /v1/shipments/{shipment_id}/errors | 
-[**remove_tag**](ShipmentsApi.md#remove_tag) | **DELETE** /v1/shipments/{shipment_id}/tags/{tag} | 
-[**update**](ShipmentsApi.md#update) | **PUT** /v1/shipments/{shipment_id} | 
+[**v1_shipments_by_shipment_id_get**](ShipmentsApi.md#v1_shipments_by_shipment_id_get) | **GET** /v1/shipments/{shipment_id} | shipments.get_by_id
+[**v1_shipments_by_shipment_id_put**](ShipmentsApi.md#v1_shipments_by_shipment_id_put) | **PUT** /v1/shipments/{shipment_id} | shipments.update_shipment
+[**v1_shipments_cancel_by_shipment_id_put**](ShipmentsApi.md#v1_shipments_cancel_by_shipment_id_put) | **PUT** /v1/shipments/{shipment_id}/cancel | shipments.cancel
+[**v1_shipments_errors_by_shipment_id_get**](ShipmentsApi.md#v1_shipments_errors_by_shipment_id_get) | **GET** /v1/shipments/{shipment_id}/errors | shipments.find_errors
+[**v1_shipments_external_shipment_id_by_external_shipment_id_get**](ShipmentsApi.md#v1_shipments_external_shipment_id_by_external_shipment_id_get) | **GET** /v1/shipments/external_shipment_id/{external_shipment_id} | shipments.get_by_external_id
+[**v1_shipments_get**](ShipmentsApi.md#v1_shipments_get) | **GET** /v1/shipments | shipments.find
+[**v1_shipments_post**](ShipmentsApi.md#v1_shipments_post) | **POST** /v1/shipments | shipments.create_shipments
+[**v1_shipments_rates_by_shipment_id_get**](ShipmentsApi.md#v1_shipments_rates_by_shipment_id_get) | **GET** /v1/shipments/{shipment_id}/rates | shipments.get_rates_for_shipment
+[**v1_shipments_tags_by_shipment_id_and_tag_delete**](ShipmentsApi.md#v1_shipments_tags_by_shipment_id_and_tag_delete) | **DELETE** /v1/shipments/{shipment_id}/tags/{tag} | shipments.remove_tag
+[**v1_shipments_tags_by_shipment_id_and_tag_post**](ShipmentsApi.md#v1_shipments_tags_by_shipment_id_and_tag_post) | **POST** /v1/shipments/{shipment_id}/tags/{tag} | shipments.add_tag
 
 
-# **add_tag**
-> ShipmentAddTagResponse add_tag(shipment_id, tag)
+# **v1_shipments_by_shipment_id_get**
+> Shipment v1_shipments_by_shipment_id_get(shipment_id)
+
+shipments.get_by_id
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
-shipment_id = "shipment_id_example" # String | 
-
-tag = "tag_example" # String | 
+shipment_id = 'shipment_id_example' # String | 
 
 
 begin
-  result = api_instance.add_tag(shipment_id, tag)
+  #shipments.get_by_id
+  result = api_instance.v1_shipments_by_shipment_id_get(shipment_id)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->add_tag: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_by_shipment_id_get: #{e}"
 end
 ```
 
@@ -53,11 +54,10 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
- **tag** | **String**|  | 
 
 ### Return type
 
-[**ShipmentAddTagResponse**](ShipmentAddTagResponse.md)
+[**Shipment**](Shipment.md)
 
 ### Authorization
 
@@ -65,37 +65,97 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **cancel**
-> cancel(shipment_id)
+# **v1_shipments_by_shipment_id_put**
+> CreateShipmentResponseBody v1_shipments_by_shipment_id_put(shipment_id, body)
+
+shipments.update_shipment
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
-shipment_id = "shipment_id_example" # String | 
+shipment_id = 'shipment_id_example' # String | 
+
+body = ShipEngineApi::AddressValidatingShipment.new # AddressValidatingShipment | 
 
 
 begin
-  api_instance.cancel(shipment_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->cancel: #{e}"
+  #shipments.update_shipment
+  result = api_instance.v1_shipments_by_shipment_id_put(shipment_id, body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_by_shipment_id_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **shipment_id** | **String**|  | 
+ **body** | [**AddressValidatingShipment**](AddressValidatingShipment.md)|  | 
+
+### Return type
+
+[**CreateShipmentResponseBody**](CreateShipmentResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_shipments_cancel_by_shipment_id_put**
+> v1_shipments_cancel_by_shipment_id_put(shipment_id)
+
+shipments.cancel
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::ShipmentsApi.new
+
+shipment_id = 'shipment_id_example' # String | 
+
+
+begin
+  #shipments.cancel
+  api_instance.v1_shipments_cancel_by_shipment_id_put(shipment_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_cancel_by_shipment_id_put: #{e}"
 end
 ```
 
@@ -115,89 +175,45 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **create**
-> CreateShipmentsResponse create(shipments_request)
+# **v1_shipments_errors_by_shipment_id_get**
+> ShipmentErrorsResponseBody v1_shipments_errors_by_shipment_id_get(shipment_id, opts)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::ShipmentsApi.new
-
-shipments_request = ShipEngine::CreateShipmentsRequest.new # CreateShipmentsRequest | 
-
-
-begin
-  result = api_instance.create(shipments_request)
-  p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->create: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **shipments_request** | [**CreateShipmentsRequest**](CreateShipmentsRequest.md)|  | 
-
-### Return type
-
-[**CreateShipmentsResponse**](CreateShipmentsResponse.md)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
-
-
-
-# **get**
-> Shipment get(shipment_id)
+shipments.find_errors
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
-shipment_id = "shipment_id_example" # String | 
+shipment_id = 'shipment_id_example' # String | 
 
+opts = { 
+  page: 56, # Integer | 
+  pagesize: 56 # Integer | 
+}
 
 begin
-  result = api_instance.get(shipment_id)
+  #shipments.find_errors
+  result = api_instance.v1_shipments_errors_by_shipment_id_get(shipment_id, opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->get: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_errors_by_shipment_id_get: #{e}"
 end
 ```
 
@@ -206,10 +222,12 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
+ **page** | **Integer**|  | [optional] 
+ **pagesize** | **Integer**|  | [optional] 
 
 ### Return type
 
-[**Shipment**](Shipment.md)
+[**ShipmentErrorsResponseBody**](ShipmentErrorsResponseBody.md)
 
 ### Authorization
 
@@ -217,38 +235,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **get_by_external_id**
-> Shipment get_by_external_id(external_shipment_id)
+# **v1_shipments_external_shipment_id_by_external_shipment_id_get**
+> Shipment v1_shipments_external_shipment_id_by_external_shipment_id_get(external_shipment_id)
+
+shipments.get_by_external_id
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
-external_shipment_id = "external_shipment_id_example" # String | 
+external_shipment_id = 'external_shipment_id_example' # String | 
 
 
 begin
-  result = api_instance.get_by_external_id(external_shipment_id)
+  #shipments.get_by_external_id
+  result = api_instance.v1_shipments_external_shipment_id_by_external_shipment_id_get(external_shipment_id)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->get_by_external_id: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_external_shipment_id_by_external_shipment_id_get: #{e}"
 end
 ```
 
@@ -268,104 +289,52 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **get_rates_for_shipment**
-> RateResponse get_rates_for_shipment(shipment_id, opts)
+# **v1_shipments_get**
+> ListShipmentResponseBody v1_shipments_get(opts)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::ShipmentsApi.new
-
-shipment_id = "shipment_id_example" # String | 
-
-opts = { 
-  created_at_start: DateTime.parse("2013-10-20T19:20:30+01:00") # DateTime | 
-}
-
-begin
-  result = api_instance.get_rates_for_shipment(shipment_id, opts)
-  p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->get_rates_for_shipment: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **shipment_id** | **String**|  | 
- **created_at_start** | **DateTime**|  | [optional] 
-
-### Return type
-
-[**RateResponse**](RateResponse.md)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
-
-
-
-# **list**
-> ListShipmentResponse list(opts)
+shipments.find
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
 opts = { 
-  batch_id: "batch_id_example", # String | 
-  tag: "tag_example", # String | 
-  shipment_status: "shipment_status_example", # String | 
-  modified_at_start: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | 
-  modified_at_end: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | 
-  created_at_start: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | 
-  created_at_end: DateTime.parse("2013-10-20T19:20:30+01:00"), # DateTime | 
+  batch_id: 'batch_id_example', # String | 
+  tag: 'tag_example', # String | 
+  shipment_status: 'shipment_status_example', # String | 
+  modified_at_start: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | 
+  modified_at_end: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | 
+  created_at_start: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | 
+  created_at_end: DateTime.parse('2013-10-20T19:20:30+01:00'), # DateTime | 
   page: 56, # Integer | 
   page_size: 56, # Integer | 
-  sort_dir: "sort_dir_example", # String | 
-  sort_by: "sort_by_example" # String | 
+  sort_dir: 'sort_dir_example', # String | 
+  sort_by: 'sort_by_example' # String | 
 }
 
 begin
-  result = api_instance.list(opts)
+  #shipments.find
+  result = api_instance.v1_shipments_get(opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->list: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_get: #{e}"
 end
 ```
 
@@ -387,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListShipmentResponse**](ListShipmentResponse.md)
+[**ListShipmentResponseBody**](ListShipmentResponseBody.md)
 
 ### Authorization
 
@@ -395,42 +364,98 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **list_errors**
-> ShipmentResponseErrors list_errors(shipment_id, opts)
+# **v1_shipments_post**
+> CreateShipmentsResponseBody v1_shipments_post(body)
+
+shipments.create_shipments
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
-shipment_id = "shipment_id_example" # String | 
+body = ShipEngineApi::CreateShipmentsRequestBody.new # CreateShipmentsRequestBody | 
+
+
+begin
+  #shipments.create_shipments
+  result = api_instance.v1_shipments_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**CreateShipmentsRequestBody**](CreateShipmentsRequestBody.md)|  | 
+
+### Return type
+
+[**CreateShipmentsResponseBody**](CreateShipmentsResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_shipments_rates_by_shipment_id_get**
+> RateResponseBody v1_shipments_rates_by_shipment_id_get(shipment_id, opts)
+
+shipments.get_rates_for_shipment
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::ShipmentsApi.new
+
+shipment_id = 'shipment_id_example' # String | 
 
 opts = { 
-  page: 56, # Integer | 
-  pagesize: 56 # Integer | 
+  created_at_start: DateTime.parse('2013-10-20T19:20:30+01:00') # DateTime | 
 }
 
 begin
-  result = api_instance.list_errors(shipment_id, opts)
+  #shipments.get_rates_for_shipment
+  result = api_instance.v1_shipments_rates_by_shipment_id_get(shipment_id, opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->list_errors: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_rates_by_shipment_id_get: #{e}"
 end
 ```
 
@@ -439,12 +464,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
- **page** | **Integer**|  | [optional] 
- **pagesize** | **Integer**|  | [optional] 
+ **created_at_start** | **DateTime**|  | [optional] 
 
 ### Return type
 
-[**ShipmentResponseErrors**](ShipmentResponseErrors.md)
+[**RateResponseBody**](RateResponseBody.md)
 
 ### Authorization
 
@@ -452,39 +476,42 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **remove_tag**
-> remove_tag(shipment_id, tag)
+# **v1_shipments_tags_by_shipment_id_and_tag_delete**
+> v1_shipments_tags_by_shipment_id_and_tag_delete(shipment_id, tag)
+
+shipments.remove_tag
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
-shipment_id = "shipment_id_example" # String | 
+shipment_id = 'shipment_id_example' # String | 
 
-tag = "tag_example" # String | 
+tag = 'tag_example' # String | 
 
 
 begin
-  api_instance.remove_tag(shipment_id, tag)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->remove_tag: #{e}"
+  #shipments.remove_tag
+  api_instance.v1_shipments_tags_by_shipment_id_and_tag_delete(shipment_id, tag)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_tags_by_shipment_id_and_tag_delete: #{e}"
 end
 ```
 
@@ -505,39 +532,43 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **update**
-> update(shipment_id, shipment)
+# **v1_shipments_tags_by_shipment_id_and_tag_post**
+> ShipmentAddTagResponseBody v1_shipments_tags_by_shipment_id_and_tag_post(shipment_id, tag)
+
+shipments.add_tag
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::ShipmentsApi.new
+api_instance = ShipEngineApi::ShipmentsApi.new
 
-shipment_id = "shipment_id_example" # String | 
+shipment_id = 'shipment_id_example' # String | 
 
-shipment = ShipEngine::AddressValidatingShipment.new # AddressValidatingShipment | 
+tag = 'tag_example' # String | 
 
 
 begin
-  api_instance.update(shipment_id, shipment)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling ShipmentsApi->update: #{e}"
+  #shipments.add_tag
+  result = api_instance.v1_shipments_tags_by_shipment_id_and_tag_post(shipment_id, tag)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling ShipmentsApi->v1_shipments_tags_by_shipment_id_and_tag_post: #{e}"
 end
 ```
 
@@ -546,11 +577,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shipment_id** | **String**|  | 
- **shipment** | [**AddressValidatingShipment**](AddressValidatingShipment.md)|  | 
+ **tag** | **String**|  | 
 
 ### Return type
 
-nil (empty response body)
+[**ShipmentAddTagResponseBody**](ShipmentAddTagResponseBody.md)
 
 ### Authorization
 
@@ -558,8 +589,8 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

@@ -1,67 +1,140 @@
-# ShipEngine::CarrierAccountsApi
+# ShipEngineApi::CarrierAccountsApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**access_worldwide_connect_account**](CarrierAccountsApi.md#access_worldwide_connect_account) | **POST** /v1/connections/carriers/access_worldwide | 
-[**access_worldwide_disconnect_account**](CarrierAccountsApi.md#access_worldwide_disconnect_account) | **DELETE** /v1/connections/carriers/access_worldwide/{carrier_id} | 
-[**apc_connect_account**](CarrierAccountsApi.md#apc_connect_account) | **POST** /v1/connections/carriers/apc | 
-[**apc_disconnect_account**](CarrierAccountsApi.md#apc_disconnect_account) | **DELETE** /v1/connections/carriers/apc/{carrier_id} | 
-[**asendia_connect_account**](CarrierAccountsApi.md#asendia_connect_account) | **POST** /v1/connections/carriers/asendia | 
-[**asendia_disconnect_account**](CarrierAccountsApi.md#asendia_disconnect_account) | **DELETE** /v1/connections/carriers/asendia/{carrier_id} | 
-[**dhl_express_connect_account**](CarrierAccountsApi.md#dhl_express_connect_account) | **POST** /v1/connections/carriers/dhl_express | 
-[**dhl_express_disconnect_account**](CarrierAccountsApi.md#dhl_express_disconnect_account) | **DELETE** /v1/connections/carriers/dhl_express/{carrier_id} | 
-[**dhl_express_update_settings**](CarrierAccountsApi.md#dhl_express_update_settings) | **PUT** /v1/connections/carriers/dhl_express/{carrier_id}/settings | 
-[**endicia_connect_account**](CarrierAccountsApi.md#endicia_connect_account) | **POST** /v1/connections/carriers/endicia | 
-[**endicia_disconnect_account**](CarrierAccountsApi.md#endicia_disconnect_account) | **DELETE** /v1/connections/carriers/endicia/{carrier_id} | 
-[**fedex_connect_account**](CarrierAccountsApi.md#fedex_connect_account) | **POST** /v1/connections/carriers/fedex | 
-[**fedex_disconnect_account**](CarrierAccountsApi.md#fedex_disconnect_account) | **DELETE** /v1/connections/carriers/fedex/{carrier_id} | 
-[**fedex_update_settings**](CarrierAccountsApi.md#fedex_update_settings) | **PUT** /v1/connections/carriers/fedex/{carrier_id}/settings | 
-[**first_mile_connect_account**](CarrierAccountsApi.md#first_mile_connect_account) | **POST** /v1/connections/carriers/firstmile | 
-[**first_mile_disconnect_account**](CarrierAccountsApi.md#first_mile_disconnect_account) | **DELETE** /v1/connections/carriers/firstmile/{carrier_id} | 
-[**globegistics_connect_account**](CarrierAccountsApi.md#globegistics_connect_account) | **POST** /v1/connections/carriers/globegistics | 
-[**globegistics_disconnect_account**](CarrierAccountsApi.md#globegistics_disconnect_account) | **DELETE** /v1/connections/carriers/globegistics/{carrier_id} | 
-[**imex_connect_account**](CarrierAccountsApi.md#imex_connect_account) | **POST** /v1/connections/carriers/imex | 
-[**imex_disconnect_account**](CarrierAccountsApi.md#imex_disconnect_account) | **DELETE** /v1/connections/carriers/imex/{carrier_id} | 
-[**on_trac_connect_account**](CarrierAccountsApi.md#on_trac_connect_account) | **POST** /v1/connections/carriers/ontrac | 
-[**on_trac_disconnect_account**](CarrierAccountsApi.md#on_trac_disconnect_account) | **DELETE** /v1/connections/carriers/ontrac/{carrier_id} | 
-[**rr_donnelley_connect_account**](CarrierAccountsApi.md#rr_donnelley_connect_account) | **POST** /v1/connections/carriers/rr_donnelley | 
-[**rr_donnelley_disconnect_account**](CarrierAccountsApi.md#rr_donnelley_disconnect_account) | **DELETE** /v1/connections/carriers/rr_donnelley/{carrier_id} | 
-[**stamps_connect_account**](CarrierAccountsApi.md#stamps_connect_account) | **POST** /v1/connections/carriers/stamps_com | 
-[**stamps_disconnect_account**](CarrierAccountsApi.md#stamps_disconnect_account) | **DELETE** /v1/connections/carriers/stamps_com/{carrier_id} | 
-[**ups_connect_account**](CarrierAccountsApi.md#ups_connect_account) | **POST** /v1/connections/carriers/ups | 
-[**ups_disconnect_account**](CarrierAccountsApi.md#ups_disconnect_account) | **DELETE** /v1/connections/carriers/ups/{carrier_id} | 
-[**ups_update_settings**](CarrierAccountsApi.md#ups_update_settings) | **PUT** /v1/connections/carriers/ups/{carrier_id}/settings | 
+[**v1_connections_carriers_access_worldwide_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_access_worldwide_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/access_worldwide/{carrier_id} | access_worldwide_account_carrier.disconnect_account
+[**v1_connections_carriers_access_worldwide_post**](CarrierAccountsApi.md#v1_connections_carriers_access_worldwide_post) | **POST** /v1/connections/carriers/access_worldwide | access_worldwide_account_carrier.connect_account
+[**v1_connections_carriers_apc_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_apc_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/apc/{carrier_id} | apc_account_carrier.disconnect_account
+[**v1_connections_carriers_apc_post**](CarrierAccountsApi.md#v1_connections_carriers_apc_post) | **POST** /v1/connections/carriers/apc | apc_account_carrier.connect_account
+[**v1_connections_carriers_asendia_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_asendia_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/asendia/{carrier_id} | asendia_account_carrier.disconnect_account
+[**v1_connections_carriers_asendia_post**](CarrierAccountsApi.md#v1_connections_carriers_asendia_post) | **POST** /v1/connections/carriers/asendia | asendia_account_carrier.connect_account
+[**v1_connections_carriers_dhl_ecommerce_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_dhl_ecommerce_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/dhl_ecommerce/{carrier_id} | dhl_ecommerce_account_carrier.disconnect_account
+[**v1_connections_carriers_dhl_ecommerce_post**](CarrierAccountsApi.md#v1_connections_carriers_dhl_ecommerce_post) | **POST** /v1/connections/carriers/dhl_ecommerce | dhl_ecommerce_account_carrier.connect_account
+[**v1_connections_carriers_dhl_express_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_dhl_express_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/dhl_express/{carrier_id} | dhl_express_account_carrier.disconnect_account
+[**v1_connections_carriers_dhl_express_post**](CarrierAccountsApi.md#v1_connections_carriers_dhl_express_post) | **POST** /v1/connections/carriers/dhl_express | dhl_express_account_carrier.connect_account
+[**v1_connections_carriers_dhl_express_settings_by_carrier_id_get**](CarrierAccountsApi.md#v1_connections_carriers_dhl_express_settings_by_carrier_id_get) | **GET** /v1/connections/carriers/dhl_express/{carrier_id}/settings | dhl_express_account_carrier.get_settings
+[**v1_connections_carriers_dhl_express_settings_by_carrier_id_put**](CarrierAccountsApi.md#v1_connections_carriers_dhl_express_settings_by_carrier_id_put) | **PUT** /v1/connections/carriers/dhl_express/{carrier_id}/settings | dhl_express_account_carrier.update_settings
+[**v1_connections_carriers_dhl_express_uk_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_dhl_express_uk_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/dhl_express_uk/{carrier_id} | dhl_express_uk_account_carrier.disconnect_account
+[**v1_connections_carriers_dhl_express_uk_post**](CarrierAccountsApi.md#v1_connections_carriers_dhl_express_uk_post) | **POST** /v1/connections/carriers/dhl_express_uk | dhl_express_uk_account_carrier.connect_account
+[**v1_connections_carriers_dpd_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_dpd_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/dpd/{carrier_id} | dpd_account_carrier.disconnect_account
+[**v1_connections_carriers_dpd_post**](CarrierAccountsApi.md#v1_connections_carriers_dpd_post) | **POST** /v1/connections/carriers/dpd | dpd_account_carrier.connect_account
+[**v1_connections_carriers_endicia_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_endicia_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/endicia/{carrier_id} | endicia_account_carrier.disconnect_account
+[**v1_connections_carriers_endicia_post**](CarrierAccountsApi.md#v1_connections_carriers_endicia_post) | **POST** /v1/connections/carriers/endicia | endicia_account_carrier.connect_account
+[**v1_connections_carriers_fedex_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_fedex_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/fedex/{carrier_id} | fedex_account_carrier.disconnect_account
+[**v1_connections_carriers_fedex_post**](CarrierAccountsApi.md#v1_connections_carriers_fedex_post) | **POST** /v1/connections/carriers/fedex | fedex_account_carrier.connect_account
+[**v1_connections_carriers_fedex_settings_by_carrier_id_get**](CarrierAccountsApi.md#v1_connections_carriers_fedex_settings_by_carrier_id_get) | **GET** /v1/connections/carriers/fedex/{carrier_id}/settings | fedex_account_carrier.get_settings
+[**v1_connections_carriers_fedex_settings_by_carrier_id_put**](CarrierAccountsApi.md#v1_connections_carriers_fedex_settings_by_carrier_id_put) | **PUT** /v1/connections/carriers/fedex/{carrier_id}/settings | fedex_account_carrier.update_settings
+[**v1_connections_carriers_fedex_uk_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_fedex_uk_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/fedex_uk/{carrier_id} | fedex_uk_account_carrier.disconnect_account
+[**v1_connections_carriers_fedex_uk_post**](CarrierAccountsApi.md#v1_connections_carriers_fedex_uk_post) | **POST** /v1/connections/carriers/fedex_uk | fedex_uk_account_carrier.connect_account
+[**v1_connections_carriers_firstmile_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_firstmile_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/firstmile/{carrier_id} | first_mile_account_carrier.disconnect_account
+[**v1_connections_carriers_firstmile_post**](CarrierAccountsApi.md#v1_connections_carriers_firstmile_post) | **POST** /v1/connections/carriers/firstmile | first_mile_account_carrier.connect_account
+[**v1_connections_carriers_globegistics_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_globegistics_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/globegistics/{carrier_id} | globegistics_account_carrier.disconnect_account
+[**v1_connections_carriers_globegistics_post**](CarrierAccountsApi.md#v1_connections_carriers_globegistics_post) | **POST** /v1/connections/carriers/globegistics | globegistics_account_carrier.connect_account
+[**v1_connections_carriers_imex_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_imex_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/imex/{carrier_id} | imex_account_carrier.disconnect_account
+[**v1_connections_carriers_imex_post**](CarrierAccountsApi.md#v1_connections_carriers_imex_post) | **POST** /v1/connections/carriers/imex | imex_account_carrier.connect_account
+[**v1_connections_carriers_newgistics_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_newgistics_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/newgistics/{carrier_id} | newgistics_account_carrier.disconnect_account
+[**v1_connections_carriers_newgistics_post**](CarrierAccountsApi.md#v1_connections_carriers_newgistics_post) | **POST** /v1/connections/carriers/newgistics | newgistics_account_carrier.connect_account
+[**v1_connections_carriers_newgistics_settings_by_carrier_id_put**](CarrierAccountsApi.md#v1_connections_carriers_newgistics_settings_by_carrier_id_put) | **PUT** /v1/connections/carriers/newgistics/{carrier_id}/settings | newgistics_account_carrier.update_settings
+[**v1_connections_carriers_ontrac_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_ontrac_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/ontrac/{carrier_id} | ontrac_account_carrier.disconnect_account
+[**v1_connections_carriers_ontrac_post**](CarrierAccountsApi.md#v1_connections_carriers_ontrac_post) | **POST** /v1/connections/carriers/ontrac | ontrac_account_carrier.connect_account
+[**v1_connections_carriers_royal_mail_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_royal_mail_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/royal_mail/{carrier_id} | royal_mail_account_carrier.disconnect_account
+[**v1_connections_carriers_royal_mail_post**](CarrierAccountsApi.md#v1_connections_carriers_royal_mail_post) | **POST** /v1/connections/carriers/royal_mail | royal_mail_account_carrier.connect_account
+[**v1_connections_carriers_rr_donnelley_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_rr_donnelley_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/rr_donnelley/{carrier_id} | rr_donnelley_account_carrier.disconnect_account
+[**v1_connections_carriers_rr_donnelley_post**](CarrierAccountsApi.md#v1_connections_carriers_rr_donnelley_post) | **POST** /v1/connections/carriers/rr_donnelley | rr_donnelley_account_carrier.connect_account
+[**v1_connections_carriers_stamps_com_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_stamps_com_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/stamps_com/{carrier_id} | stamps_account_carrier.disconnect_account
+[**v1_connections_carriers_stamps_com_post**](CarrierAccountsApi.md#v1_connections_carriers_stamps_com_post) | **POST** /v1/connections/carriers/stamps_com | stamps_account_carrier.connect_account
+[**v1_connections_carriers_stamps_com_request_account_url_by_carrier_id_put**](CarrierAccountsApi.md#v1_connections_carriers_stamps_com_request_account_url_by_carrier_id_put) | **PUT** /v1/connections/carriers/stamps_com/{carrier_id}/request_account_url | stamps_account_carrier.get_account_url
+[**v1_connections_carriers_ups_by_carrier_id_delete**](CarrierAccountsApi.md#v1_connections_carriers_ups_by_carrier_id_delete) | **DELETE** /v1/connections/carriers/ups/{carrier_id} | ups_account_carrier.disconnect_account
+[**v1_connections_carriers_ups_post**](CarrierAccountsApi.md#v1_connections_carriers_ups_post) | **POST** /v1/connections/carriers/ups | ups_account_carrier.connect_account
+[**v1_connections_carriers_ups_settings_by_carrier_id_get**](CarrierAccountsApi.md#v1_connections_carriers_ups_settings_by_carrier_id_get) | **GET** /v1/connections/carriers/ups/{carrier_id}/settings | ups_account_carrier.get_settings
+[**v1_connections_carriers_ups_settings_by_carrier_id_put**](CarrierAccountsApi.md#v1_connections_carriers_ups_settings_by_carrier_id_put) | **PUT** /v1/connections/carriers/ups/{carrier_id}/settings | ups_account_carrier.update_settings
 
 
-# **access_worldwide_connect_account**
-> ConnectAccountResponseDTO access_worldwide_connect_account(model)
+# **v1_connections_carriers_access_worldwide_by_carrier_id_delete**
+> v1_connections_carriers_access_worldwide_by_carrier_id_delete(carrier_id)
+
+access_worldwide_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::AccessWorldwideAccountInformationDTO.new # AccessWorldwideAccountInformationDTO | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  result = api_instance.access_worldwide_connect_account(model)
+  #access_worldwide_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_access_worldwide_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_access_worldwide_by_carrier_id_delete: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_access_worldwide_post**
+> ConnectAccountResponseBody v1_connections_carriers_access_worldwide_post(body)
+
+access_worldwide_account_carrier.connect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+body = ShipEngineApi::AccessWorldwideAccountInformationRequestBody.new # AccessWorldwideAccountInformationRequestBody | 
+
+
+begin
+  #access_worldwide_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_access_worldwide_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->access_worldwide_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_access_worldwide_post: #{e}"
 end
 ```
 
@@ -69,11 +142,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**AccessWorldwideAccountInformationDTO**](AccessWorldwideAccountInformationDTO.md)|  | 
+ **body** | [**AccessWorldwideAccountInformationRequestBody**](AccessWorldwideAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -81,37 +154,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **access_worldwide_disconnect_account**
-> access_worldwide_disconnect_account(carrier_id)
+# **v1_connections_carriers_apc_by_carrier_id_delete**
+> v1_connections_carriers_apc_by_carrier_id_delete(carrier_id)
+
+apc_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  api_instance.access_worldwide_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->access_worldwide_disconnect_account: #{e}"
+  #apc_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_apc_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_apc_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -131,38 +207,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **apc_connect_account**
-> ConnectAccountResponseDTO apc_connect_account(model)
+# **v1_connections_carriers_apc_post**
+> ConnectAccountResponseBody v1_connections_carriers_apc_post(body)
+
+apc_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::ApcAccountInformationDTO.new # ApcAccountInformationDTO | 
+body = ShipEngineApi::AccessWorldwideAccountInformationRequestBody.new # AccessWorldwideAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.apc_connect_account(model)
+  #apc_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_apc_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->apc_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_apc_post: #{e}"
 end
 ```
 
@@ -170,11 +249,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**ApcAccountInformationDTO**](ApcAccountInformationDTO.md)|  | 
+ **body** | [**AccessWorldwideAccountInformationRequestBody**](AccessWorldwideAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -182,37 +261,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **apc_disconnect_account**
-> apc_disconnect_account(carrier_id)
+# **v1_connections_carriers_asendia_by_carrier_id_delete**
+> v1_connections_carriers_asendia_by_carrier_id_delete(carrier_id)
+
+asendia_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  api_instance.apc_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->apc_disconnect_account: #{e}"
+  #asendia_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_asendia_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_asendia_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -232,38 +314,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **asendia_connect_account**
-> ConnectAccountResponseDTO asendia_connect_account(model)
+# **v1_connections_carriers_asendia_post**
+> ConnectAccountResponseBody v1_connections_carriers_asendia_post(body)
+
+asendia_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::AsendiaAccountInformationDTO.new # AsendiaAccountInformationDTO | 
+body = ShipEngineApi::AsendiaAccountInformationRequestBody.new # AsendiaAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.asendia_connect_account(model)
+  #asendia_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_asendia_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->asendia_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_asendia_post: #{e}"
 end
 ```
 
@@ -271,11 +356,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**AsendiaAccountInformationDTO**](AsendiaAccountInformationDTO.md)|  | 
+ **body** | [**AsendiaAccountInformationRequestBody**](AsendiaAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -283,37 +368,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **asendia_disconnect_account**
-> asendia_disconnect_account(carrier_id)
+# **v1_connections_carriers_dhl_ecommerce_by_carrier_id_delete**
+> v1_connections_carriers_dhl_ecommerce_by_carrier_id_delete(carrier_id)
+
+dhl_ecommerce_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  api_instance.asendia_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->asendia_disconnect_account: #{e}"
+  #dhl_ecommerce_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_dhl_ecommerce_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dhl_ecommerce_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -333,38 +421,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **dhl_express_connect_account**
-> ConnectAccountResponseDTO dhl_express_connect_account(model)
+# **v1_connections_carriers_dhl_ecommerce_post**
+> ConnectAccountResponseBody v1_connections_carriers_dhl_ecommerce_post(body)
+
+dhl_ecommerce_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::DHLExpressAccountInformationDTO.new # DHLExpressAccountInformationDTO | 
+body = ShipEngineApi::DhlEcommerceAccountInformationRequestBody.new # DhlEcommerceAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.dhl_express_connect_account(model)
+  #dhl_ecommerce_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_dhl_ecommerce_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->dhl_express_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dhl_ecommerce_post: #{e}"
 end
 ```
 
@@ -372,11 +463,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**DHLExpressAccountInformationDTO**](DHLExpressAccountInformationDTO.md)|  | 
+ **body** | [**DhlEcommerceAccountInformationRequestBody**](DhlEcommerceAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -384,37 +475,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **dhl_express_disconnect_account**
-> dhl_express_disconnect_account(carrier_id)
+# **v1_connections_carriers_dhl_express_by_carrier_id_delete**
+> v1_connections_carriers_dhl_express_by_carrier_id_delete(carrier_id)
+
+dhl_express_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  api_instance.dhl_express_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->dhl_express_disconnect_account: #{e}"
+  #dhl_express_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_dhl_express_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dhl_express_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -434,91 +528,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **dhl_express_update_settings**
-> dhl_express_update_settings(carrier_id, settings)
+# **v1_connections_carriers_dhl_express_post**
+> ConnectAccountResponseBody v1_connections_carriers_dhl_express_post(body)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::CarrierAccountsApi.new
-
-carrier_id = "carrier_id_example" # String | 
-
-settings = ShipEngine::DHLExpressAccountSettingsDTO.new # DHLExpressAccountSettingsDTO | 
-
-
-begin
-  api_instance.dhl_express_update_settings(carrier_id, settings)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->dhl_express_update_settings: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **carrier_id** | **String**|  | 
- **settings** | [**DHLExpressAccountSettingsDTO**](DHLExpressAccountSettingsDTO.md)|  | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
-
-
-
-# **endicia_connect_account**
-> ConnectAccountResponseDTO endicia_connect_account(model)
+dhl_express_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::EndiciaAccountInformationDTO.new # EndiciaAccountInformationDTO | 
+body = ShipEngineApi::DhlExpressAccountInformationRequestBody.new # DhlExpressAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.endicia_connect_account(model)
+  #dhl_express_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_dhl_express_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->endicia_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dhl_express_post: #{e}"
 end
 ```
 
@@ -526,11 +570,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**EndiciaAccountInformationDTO**](EndiciaAccountInformationDTO.md)|  | 
+ **body** | [**DhlExpressAccountInformationRequestBody**](DhlExpressAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -538,88 +582,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **endicia_disconnect_account**
-> endicia_disconnect_account(carrier_id)
+# **v1_connections_carriers_dhl_express_settings_by_carrier_id_get**
+> DhlExpressAccountSettings v1_connections_carriers_dhl_express_settings_by_carrier_id_get(carrier_id)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::CarrierAccountsApi.new
-
-carrier_id = "carrier_id_example" # String | 
-
-
-begin
-  api_instance.endicia_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->endicia_disconnect_account: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **carrier_id** | **String**|  | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
-
-
-
-# **fedex_connect_account**
-> ConnectAccountResponseDTO fedex_connect_account(model)
+dhl_express_account_carrier.get_settings
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::FedExAccountInformationDTO.new # FedExAccountInformationDTO | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  result = api_instance.fedex_connect_account(model)
+  #dhl_express_account_carrier.get_settings
+  result = api_instance.v1_connections_carriers_dhl_express_settings_by_carrier_id_get(carrier_id)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->fedex_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dhl_express_settings_by_carrier_id_get: #{e}"
 end
 ```
 
@@ -627,11 +624,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**FedExAccountInformationDTO**](FedExAccountInformationDTO.md)|  | 
+ **carrier_id** | **String**|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**DhlExpressAccountSettings**](DhlExpressAccountSettings.md)
 
 ### Authorization
 
@@ -639,37 +636,96 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **fedex_disconnect_account**
-> fedex_disconnect_account(carrier_id)
+# **v1_connections_carriers_dhl_express_settings_by_carrier_id_put**
+> v1_connections_carriers_dhl_express_settings_by_carrier_id_put(carrier_id, body)
+
+dhl_express_account_carrier.update_settings
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
+
+body = ShipEngineApi::DhlExpressAccountSettings.new # DhlExpressAccountSettings | 
 
 
 begin
-  api_instance.fedex_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->fedex_disconnect_account: #{e}"
+  #dhl_express_account_carrier.update_settings
+  api_instance.v1_connections_carriers_dhl_express_settings_by_carrier_id_put(carrier_id, body)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dhl_express_settings_by_carrier_id_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+ **body** | [**DhlExpressAccountSettings**](DhlExpressAccountSettings.md)|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_dhl_express_uk_by_carrier_id_delete**
+> v1_connections_carriers_dhl_express_uk_by_carrier_id_delete(carrier_id)
+
+dhl_express_uk_account_carrier.disconnect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #dhl_express_uk_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_dhl_express_uk_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dhl_express_uk_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -689,91 +745,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **fedex_update_settings**
-> fedex_update_settings(carrier_id, settings)
+# **v1_connections_carriers_dhl_express_uk_post**
+> ConnectAccountResponseBody v1_connections_carriers_dhl_express_uk_post(body)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::CarrierAccountsApi.new
-
-carrier_id = "carrier_id_example" # String | 
-
-settings = ShipEngine::FedExAccountSettingsDTO.new # FedExAccountSettingsDTO | 
-
-
-begin
-  api_instance.fedex_update_settings(carrier_id, settings)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->fedex_update_settings: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **carrier_id** | **String**|  | 
- **settings** | [**FedExAccountSettingsDTO**](FedExAccountSettingsDTO.md)|  | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
-
-
-
-# **first_mile_connect_account**
-> ConnectAccountResponseDTO first_mile_connect_account(model)
+dhl_express_uk_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::FirstMileAccountInformationDTO.new # FirstMileAccountInformationDTO | 
+body = ShipEngineApi::DhlExpressUkAccountInformationRequestBody.new # DhlExpressUkAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.first_mile_connect_account(model)
+  #dhl_express_uk_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_dhl_express_uk_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->first_mile_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dhl_express_uk_post: #{e}"
 end
 ```
 
@@ -781,11 +787,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**FirstMileAccountInformationDTO**](FirstMileAccountInformationDTO.md)|  | 
+ **body** | [**DhlExpressUkAccountInformationRequestBody**](DhlExpressUkAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -793,37 +799,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **first_mile_disconnect_account**
-> first_mile_disconnect_account(carrier_id)
+# **v1_connections_carriers_dpd_by_carrier_id_delete**
+> v1_connections_carriers_dpd_by_carrier_id_delete(carrier_id)
+
+dpd_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  api_instance.first_mile_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->first_mile_disconnect_account: #{e}"
+  #dpd_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_dpd_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dpd_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -843,38 +852,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **globegistics_connect_account**
-> ConnectAccountResponseDTO globegistics_connect_account(model)
+# **v1_connections_carriers_dpd_post**
+> ConnectAccountResponseBody v1_connections_carriers_dpd_post(body)
+
+dpd_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::GlobegisticsAccountInformationDTO.new # GlobegisticsAccountInformationDTO | 
+body = ShipEngineApi::DpdAccountInformationRequestBody.new # DpdAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.globegistics_connect_account(model)
+  #dpd_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_dpd_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->globegistics_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_dpd_post: #{e}"
 end
 ```
 
@@ -882,11 +894,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**GlobegisticsAccountInformationDTO**](GlobegisticsAccountInformationDTO.md)|  | 
+ **body** | [**DpdAccountInformationRequestBody**](DpdAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -894,37 +906,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **globegistics_disconnect_account**
-> globegistics_disconnect_account(carrier_id)
+# **v1_connections_carriers_endicia_by_carrier_id_delete**
+> v1_connections_carriers_endicia_by_carrier_id_delete(carrier_id)
+
+endicia_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  api_instance.globegistics_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->globegistics_disconnect_account: #{e}"
+  #endicia_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_endicia_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_endicia_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -944,38 +959,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **imex_connect_account**
-> ConnectAccountResponseDTO imex_connect_account(model)
+# **v1_connections_carriers_endicia_post**
+> ConnectAccountResponseBody v1_connections_carriers_endicia_post(body)
+
+endicia_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::ImexAccountInformationDTO.new # ImexAccountInformationDTO | 
+body = ShipEngineApi::EndiciaAccountInformationRequestBody.new # EndiciaAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.imex_connect_account(model)
+  #endicia_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_endicia_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->imex_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_endicia_post: #{e}"
 end
 ```
 
@@ -983,11 +1001,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**ImexAccountInformationDTO**](ImexAccountInformationDTO.md)|  | 
+ **body** | [**EndiciaAccountInformationRequestBody**](EndiciaAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -995,37 +1013,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **imex_disconnect_account**
-> imex_disconnect_account(carrier_id)
+# **v1_connections_carriers_fedex_by_carrier_id_delete**
+> v1_connections_carriers_fedex_by_carrier_id_delete(carrier_id)
+
+fedex_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  api_instance.imex_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->imex_disconnect_account: #{e}"
+  #fedex_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_fedex_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_fedex_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -1045,38 +1066,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **on_trac_connect_account**
-> ConnectAccountResponseDTO on_trac_connect_account(model)
+# **v1_connections_carriers_fedex_post**
+> ConnectAccountResponseBody v1_connections_carriers_fedex_post(body)
+
+fedex_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::OnTracAccountInformationDTO.new # OnTracAccountInformationDTO | 
+body = ShipEngineApi::FedexAccountInformationRequestBody.new # FedexAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.on_trac_connect_account(model)
+  #fedex_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_fedex_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->on_trac_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_fedex_post: #{e}"
 end
 ```
 
@@ -1084,11 +1108,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**OnTracAccountInformationDTO**](OnTracAccountInformationDTO.md)|  | 
+ **body** | [**FedexAccountInformationRequestBody**](FedexAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -1096,88 +1120,41 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **on_trac_disconnect_account**
-> on_trac_disconnect_account(carrier_id)
+# **v1_connections_carriers_fedex_settings_by_carrier_id_get**
+> UpsAccountSettings v1_connections_carriers_fedex_settings_by_carrier_id_get(carrier_id)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::CarrierAccountsApi.new
-
-carrier_id = "carrier_id_example" # String | 
-
-
-begin
-  api_instance.on_trac_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->on_trac_disconnect_account: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **carrier_id** | **String**|  | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
-
-
-
-# **rr_donnelley_connect_account**
-> ConnectAccountResponseDTO rr_donnelley_connect_account(model)
+fedex_account_carrier.get_settings
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::RrDonnelleyAccountInformationDTO.new # RrDonnelleyAccountInformationDTO | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  result = api_instance.rr_donnelley_connect_account(model)
+  #fedex_account_carrier.get_settings
+  result = api_instance.v1_connections_carriers_fedex_settings_by_carrier_id_get(carrier_id)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->rr_donnelley_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_fedex_settings_by_carrier_id_get: #{e}"
 end
 ```
 
@@ -1185,11 +1162,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**RrDonnelleyAccountInformationDTO**](RrDonnelleyAccountInformationDTO.md)|  | 
+ **carrier_id** | **String**|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**UpsAccountSettings**](UpsAccountSettings.md)
 
 ### Authorization
 
@@ -1197,37 +1174,96 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **rr_donnelley_disconnect_account**
-> rr_donnelley_disconnect_account(carrier_id)
+# **v1_connections_carriers_fedex_settings_by_carrier_id_put**
+> v1_connections_carriers_fedex_settings_by_carrier_id_put(carrier_id, body)
+
+fedex_account_carrier.update_settings
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
+
+body = ShipEngineApi::FedexAccountSettingsRequestBody.new # FedexAccountSettingsRequestBody | 
 
 
 begin
-  api_instance.rr_donnelley_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->rr_donnelley_disconnect_account: #{e}"
+  #fedex_account_carrier.update_settings
+  api_instance.v1_connections_carriers_fedex_settings_by_carrier_id_put(carrier_id, body)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_fedex_settings_by_carrier_id_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+ **body** | [**FedexAccountSettingsRequestBody**](FedexAccountSettingsRequestBody.md)|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_fedex_uk_by_carrier_id_delete**
+> v1_connections_carriers_fedex_uk_by_carrier_id_delete(carrier_id)
+
+fedex_uk_account_carrier.disconnect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #fedex_uk_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_fedex_uk_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_fedex_uk_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -1247,38 +1283,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **stamps_connect_account**
-> ConnectAccountResponseDTO stamps_connect_account(model)
+# **v1_connections_carriers_fedex_uk_post**
+> ConnectAccountResponseBody v1_connections_carriers_fedex_uk_post(body)
+
+fedex_uk_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::StampsAccountInformationDTO.new # StampsAccountInformationDTO | 
+body = ShipEngineApi::FedexUkAccountInformationRequestBody.new # FedexUkAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.stamps_connect_account(model)
+  #fedex_uk_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_fedex_uk_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->stamps_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_fedex_uk_post: #{e}"
 end
 ```
 
@@ -1286,11 +1325,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**StampsAccountInformationDTO**](StampsAccountInformationDTO.md)|  | 
+ **body** | [**FedexUkAccountInformationRequestBody**](FedexUkAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -1298,37 +1337,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **stamps_disconnect_account**
-> stamps_disconnect_account(carrier_id)
+# **v1_connections_carriers_firstmile_by_carrier_id_delete**
+> v1_connections_carriers_firstmile_by_carrier_id_delete(carrier_id)
+
+first_mile_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  api_instance.stamps_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->stamps_disconnect_account: #{e}"
+  #first_mile_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_firstmile_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_firstmile_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -1348,38 +1390,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **ups_connect_account**
-> ConnectAccountResponseDTO ups_connect_account(model)
+# **v1_connections_carriers_firstmile_post**
+> ConnectAccountResponseBody v1_connections_carriers_firstmile_post(body)
+
+first_mile_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-model = ShipEngine::UPSAccountInformationDTO.new # UPSAccountInformationDTO | 
+body = ShipEngineApi::FirstMileAccountInformationRequestBody.new # FirstMileAccountInformationRequestBody | 
 
 
 begin
-  result = api_instance.ups_connect_account(model)
+  #first_mile_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_firstmile_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->ups_connect_account: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_firstmile_post: #{e}"
 end
 ```
 
@@ -1387,11 +1432,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**UPSAccountInformationDTO**](UPSAccountInformationDTO.md)|  | 
+ **body** | [**FirstMileAccountInformationRequestBody**](FirstMileAccountInformationRequestBody.md)|  | 
 
 ### Return type
 
-[**ConnectAccountResponseDTO**](ConnectAccountResponseDTO.md)
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
 
 ### Authorization
 
@@ -1399,37 +1444,40 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **ups_disconnect_account**
-> ups_disconnect_account(carrier_id)
+# **v1_connections_carriers_globegistics_by_carrier_id_delete**
+> v1_connections_carriers_globegistics_by_carrier_id_delete(carrier_id)
+
+globegistics_account_carrier.disconnect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
+carrier_id = 'carrier_id_example' # String | 
 
 
 begin
-  api_instance.ups_disconnect_account(carrier_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->ups_disconnect_account: #{e}"
+  #globegistics_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_globegistics_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_globegistics_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -1449,39 +1497,94 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **ups_update_settings**
-> ups_update_settings(carrier_id, settings)
+# **v1_connections_carriers_globegistics_post**
+> ConnectAccountResponseBody v1_connections_carriers_globegistics_post(body)
+
+globegistics_account_carrier.connect_account
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::CarrierAccountsApi.new
+api_instance = ShipEngineApi::CarrierAccountsApi.new
 
-carrier_id = "carrier_id_example" # String | 
-
-settings = ShipEngine::UPSAccountSettingsDTO.new # UPSAccountSettingsDTO | 
+body = ShipEngineApi::AccessWorldwideAccountInformationRequestBody.new # AccessWorldwideAccountInformationRequestBody | 
 
 
 begin
-  api_instance.ups_update_settings(carrier_id, settings)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling CarrierAccountsApi->ups_update_settings: #{e}"
+  #globegistics_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_globegistics_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_globegistics_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccessWorldwideAccountInformationRequestBody**](AccessWorldwideAccountInformationRequestBody.md)|  | 
+
+### Return type
+
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_imex_by_carrier_id_delete**
+> v1_connections_carriers_imex_by_carrier_id_delete(carrier_id)
+
+imex_account_carrier.disconnect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #imex_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_imex_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_imex_by_carrier_id_delete: #{e}"
 end
 ```
 
@@ -1490,7 +1593,6 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **carrier_id** | **String**|  | 
- **settings** | [**UPSAccountSettingsDTO**](UPSAccountSettingsDTO.md)|  | 
 
 ### Return type
 
@@ -1502,8 +1604,927 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_imex_post**
+> ConnectAccountResponseBody v1_connections_carriers_imex_post(body)
+
+imex_account_carrier.connect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+body = ShipEngineApi::AccessWorldwideAccountInformationRequestBody.new # AccessWorldwideAccountInformationRequestBody | 
+
+
+begin
+  #imex_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_imex_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_imex_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccessWorldwideAccountInformationRequestBody**](AccessWorldwideAccountInformationRequestBody.md)|  | 
+
+### Return type
+
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_newgistics_by_carrier_id_delete**
+> v1_connections_carriers_newgistics_by_carrier_id_delete(carrier_id)
+
+newgistics_account_carrier.disconnect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #newgistics_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_newgistics_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_newgistics_by_carrier_id_delete: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_newgistics_post**
+> ConnectAccountResponseBody v1_connections_carriers_newgistics_post(body)
+
+newgistics_account_carrier.connect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+body = ShipEngineApi::NewgisticsAccountInformationRequestBody.new # NewgisticsAccountInformationRequestBody | 
+
+
+begin
+  #newgistics_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_newgistics_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_newgistics_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**NewgisticsAccountInformationRequestBody**](NewgisticsAccountInformationRequestBody.md)|  | 
+
+### Return type
+
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_newgistics_settings_by_carrier_id_put**
+> v1_connections_carriers_newgistics_settings_by_carrier_id_put(carrier_id, body)
+
+newgistics_account_carrier.update_settings
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+body = ShipEngineApi::NewgisticsAccountSettingsRequestBody.new # NewgisticsAccountSettingsRequestBody | 
+
+
+begin
+  #newgistics_account_carrier.update_settings
+  api_instance.v1_connections_carriers_newgistics_settings_by_carrier_id_put(carrier_id, body)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_newgistics_settings_by_carrier_id_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+ **body** | [**NewgisticsAccountSettingsRequestBody**](NewgisticsAccountSettingsRequestBody.md)|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_ontrac_by_carrier_id_delete**
+> v1_connections_carriers_ontrac_by_carrier_id_delete(carrier_id)
+
+ontrac_account_carrier.disconnect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #ontrac_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_ontrac_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_ontrac_by_carrier_id_delete: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_ontrac_post**
+> ConnectAccountResponseBody v1_connections_carriers_ontrac_post(body)
+
+ontrac_account_carrier.connect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+body = ShipEngineApi::DpdAccountInformationRequestBody.new # DpdAccountInformationRequestBody | 
+
+
+begin
+  #ontrac_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_ontrac_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_ontrac_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DpdAccountInformationRequestBody**](DpdAccountInformationRequestBody.md)|  | 
+
+### Return type
+
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_royal_mail_by_carrier_id_delete**
+> v1_connections_carriers_royal_mail_by_carrier_id_delete(carrier_id)
+
+royal_mail_account_carrier.disconnect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #royal_mail_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_royal_mail_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_royal_mail_by_carrier_id_delete: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_royal_mail_post**
+> ConnectAccountResponseBody v1_connections_carriers_royal_mail_post(body)
+
+royal_mail_account_carrier.connect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+body = ShipEngineApi::RoyalMailAccountInformationRequestBody.new # RoyalMailAccountInformationRequestBody | 
+
+
+begin
+  #royal_mail_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_royal_mail_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_royal_mail_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RoyalMailAccountInformationRequestBody**](RoyalMailAccountInformationRequestBody.md)|  | 
+
+### Return type
+
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_rr_donnelley_by_carrier_id_delete**
+> v1_connections_carriers_rr_donnelley_by_carrier_id_delete(carrier_id)
+
+rr_donnelley_account_carrier.disconnect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #rr_donnelley_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_rr_donnelley_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_rr_donnelley_by_carrier_id_delete: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_rr_donnelley_post**
+> ConnectAccountResponseBody v1_connections_carriers_rr_donnelley_post(body)
+
+rr_donnelley_account_carrier.connect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+body = ShipEngineApi::AccessWorldwideAccountInformationRequestBody.new # AccessWorldwideAccountInformationRequestBody | 
+
+
+begin
+  #rr_donnelley_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_rr_donnelley_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_rr_donnelley_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccessWorldwideAccountInformationRequestBody**](AccessWorldwideAccountInformationRequestBody.md)|  | 
+
+### Return type
+
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_stamps_com_by_carrier_id_delete**
+> v1_connections_carriers_stamps_com_by_carrier_id_delete(carrier_id)
+
+stamps_account_carrier.disconnect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #stamps_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_stamps_com_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_stamps_com_by_carrier_id_delete: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_stamps_com_post**
+> ConnectAccountResponseBody v1_connections_carriers_stamps_com_post(body)
+
+stamps_account_carrier.connect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+body = ShipEngineApi::AccessWorldwideAccountInformationRequestBody.new # AccessWorldwideAccountInformationRequestBody | 
+
+
+begin
+  #stamps_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_stamps_com_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_stamps_com_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccessWorldwideAccountInformationRequestBody**](AccessWorldwideAccountInformationRequestBody.md)|  | 
+
+### Return type
+
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_stamps_com_request_account_url_by_carrier_id_put**
+> StampsAccountUrlsResponseBody v1_connections_carriers_stamps_com_request_account_url_by_carrier_id_put(carrier_id, body)
+
+stamps_account_carrier.get_account_url
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+body = ShipEngineApi::StampsAccountUrlsRequestBody.new # StampsAccountUrlsRequestBody | 
+
+
+begin
+  #stamps_account_carrier.get_account_url
+  result = api_instance.v1_connections_carriers_stamps_com_request_account_url_by_carrier_id_put(carrier_id, body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_stamps_com_request_account_url_by_carrier_id_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+ **body** | [**StampsAccountUrlsRequestBody**](StampsAccountUrlsRequestBody.md)|  | 
+
+### Return type
+
+[**StampsAccountUrlsResponseBody**](StampsAccountUrlsResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_ups_by_carrier_id_delete**
+> v1_connections_carriers_ups_by_carrier_id_delete(carrier_id)
+
+ups_account_carrier.disconnect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #ups_account_carrier.disconnect_account
+  api_instance.v1_connections_carriers_ups_by_carrier_id_delete(carrier_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_ups_by_carrier_id_delete: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_ups_post**
+> ConnectAccountResponseBody v1_connections_carriers_ups_post(body)
+
+ups_account_carrier.connect_account
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+body = ShipEngineApi::UpsAccountInformationRequestBody.new # UpsAccountInformationRequestBody | 
+
+
+begin
+  #ups_account_carrier.connect_account
+  result = api_instance.v1_connections_carriers_ups_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_ups_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**UpsAccountInformationRequestBody**](UpsAccountInformationRequestBody.md)|  | 
+
+### Return type
+
+[**ConnectAccountResponseBody**](ConnectAccountResponseBody.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_ups_settings_by_carrier_id_get**
+> UpsAccountSettings v1_connections_carriers_ups_settings_by_carrier_id_get(carrier_id)
+
+ups_account_carrier.get_settings
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+
+begin
+  #ups_account_carrier.get_settings
+  result = api_instance.v1_connections_carriers_ups_settings_by_carrier_id_get(carrier_id)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_ups_settings_by_carrier_id_get: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+
+### Return type
+
+[**UpsAccountSettings**](UpsAccountSettings.md)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_connections_carriers_ups_settings_by_carrier_id_put**
+> v1_connections_carriers_ups_settings_by_carrier_id_put(carrier_id, body)
+
+ups_account_carrier.update_settings
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::CarrierAccountsApi.new
+
+carrier_id = 'carrier_id_example' # String | 
+
+body = ShipEngineApi::UpsAccountSettings.new # UpsAccountSettings | 
+
+
+begin
+  #ups_account_carrier.update_settings
+  api_instance.v1_connections_carriers_ups_settings_by_carrier_id_put(carrier_id, body)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling CarrierAccountsApi->v1_connections_carriers_ups_settings_by_carrier_id_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_id** | **String**|  | 
+ **body** | [**UpsAccountSettings**](UpsAccountSettings.md)|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

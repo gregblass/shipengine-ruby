@@ -1,93 +1,45 @@
-# ShipEngine::WarehousesApi
+# ShipEngineApi::WarehousesApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create**](WarehousesApi.md#create) | **POST** /v1/warehouses | 
-[**delete**](WarehousesApi.md#delete) | **DELETE** /v1/warehouses/{warehouse_id} | 
-[**get**](WarehousesApi.md#get) | **GET** /v1/warehouses/{warehouse_id} | 
-[**list**](WarehousesApi.md#list) | **GET** /v1/warehouses | 
-[**update**](WarehousesApi.md#update) | **PUT** /v1/warehouses/{warehouse_id} | 
+[**v1_warehouses_by_warehouse_id_delete**](WarehousesApi.md#v1_warehouses_by_warehouse_id_delete) | **DELETE** /v1/warehouses/{warehouse_id} | warehouses.delete
+[**v1_warehouses_by_warehouse_id_get**](WarehousesApi.md#v1_warehouses_by_warehouse_id_get) | **GET** /v1/warehouses/{warehouse_id} | warehouses.get_by_id
+[**v1_warehouses_by_warehouse_id_put**](WarehousesApi.md#v1_warehouses_by_warehouse_id_put) | **PUT** /v1/warehouses/{warehouse_id} | warehouses.update
+[**v1_warehouses_get**](WarehousesApi.md#v1_warehouses_get) | **GET** /v1/warehouses | warehouses.find
+[**v1_warehouses_post**](WarehousesApi.md#v1_warehouses_post) | **POST** /v1/warehouses | warehouses.create
 
 
-# **create**
-> WarehouseDTO create(request)
+# **v1_warehouses_by_warehouse_id_delete**
+> v1_warehouses_by_warehouse_id_delete(warehouse_id)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::WarehousesApi.new
-
-request = ShipEngine::WarehouseRequest.new # WarehouseRequest | 
-
-
-begin
-  result = api_instance.create(request)
-  p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling WarehousesApi->create: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**WarehouseRequest**](WarehouseRequest.md)|  | 
-
-### Return type
-
-[**WarehouseDTO**](WarehouseDTO.md)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
-
-
-
-# **delete**
-> delete(warehouse_id)
+warehouses.delete
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::WarehousesApi.new
+api_instance = ShipEngineApi::WarehousesApi.new
 
-warehouse_id = "warehouse_id_example" # String | 
+warehouse_id = 'warehouse_id_example' # String | 
 
 
 begin
-  api_instance.delete(warehouse_id)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling WarehousesApi->delete: #{e}"
+  #warehouses.delete
+  api_instance.v1_warehouses_by_warehouse_id_delete(warehouse_id)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling WarehousesApi->v1_warehouses_by_warehouse_id_delete: #{e}"
 end
 ```
 
@@ -107,38 +59,41 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **get**
-> WarehouseDTO get(warehouse_id)
+# **v1_warehouses_by_warehouse_id_get**
+> Warehouse v1_warehouses_by_warehouse_id_get(warehouse_id)
+
+warehouses.get_by_id
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::WarehousesApi.new
+api_instance = ShipEngineApi::WarehousesApi.new
 
-warehouse_id = "warehouse_id_example" # String | 
+warehouse_id = 'warehouse_id_example' # String | 
 
 
 begin
-  result = api_instance.get(warehouse_id)
+  #warehouses.get_by_id
+  result = api_instance.v1_warehouses_by_warehouse_id_get(warehouse_id)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling WarehousesApi->get: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling WarehousesApi->v1_warehouses_by_warehouse_id_get: #{e}"
 end
 ```
 
@@ -150,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WarehouseDTO**](WarehouseDTO.md)
+[**Warehouse**](Warehouse.md)
 
 ### Authorization
 
@@ -158,35 +113,94 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **list**
-> WarehouseListDTO list
+# **v1_warehouses_by_warehouse_id_put**
+> v1_warehouses_by_warehouse_id_put(warehouse_id, body)
+
+warehouses.update
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::WarehousesApi.new
+api_instance = ShipEngineApi::WarehousesApi.new
+
+warehouse_id = 'warehouse_id_example' # String | 
+
+body = ShipEngineApi::WarehouseRequestBody.new # WarehouseRequestBody | 
+
 
 begin
-  result = api_instance.list
+  #warehouses.update
+  api_instance.v1_warehouses_by_warehouse_id_put(warehouse_id, body)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling WarehousesApi->v1_warehouses_by_warehouse_id_put: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **warehouse_id** | **String**|  | 
+ **body** | [**WarehouseRequestBody**](WarehouseRequestBody.md)|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_warehouses_get**
+> WarehouseListResponseBody v1_warehouses_get
+
+warehouses.find
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::WarehousesApi.new
+
+begin
+  #warehouses.find
+  result = api_instance.v1_warehouses_get
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling WarehousesApi->list: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling WarehousesApi->v1_warehouses_get: #{e}"
 end
 ```
 
@@ -195,7 +209,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**WarehouseListDTO**](WarehouseListDTO.md)
+[**WarehouseListResponseBody**](WarehouseListResponseBody.md)
 
 ### Authorization
 
@@ -203,39 +217,41 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 
-# **update**
-> update(warehouse_id, request)
+# **v1_warehouses_post**
+> Warehouse v1_warehouses_post(body)
+
+warehouses.create
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::WarehousesApi.new
+api_instance = ShipEngineApi::WarehousesApi.new
 
-warehouse_id = "warehouse_id_example" # String | 
-
-request = ShipEngine::WarehouseRequest.new # WarehouseRequest | 
+body = ShipEngineApi::WarehouseRequestBody.new # WarehouseRequestBody | 
 
 
 begin
-  api_instance.update(warehouse_id, request)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling WarehousesApi->update: #{e}"
+  #warehouses.create
+  result = api_instance.v1_warehouses_post(body)
+  p result
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling WarehousesApi->v1_warehouses_post: #{e}"
 end
 ```
 
@@ -243,12 +259,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **warehouse_id** | **String**|  | 
- **request** | [**WarehouseRequest**](WarehouseRequest.md)|  | 
+ **body** | [**WarehouseRequestBody**](WarehouseRequestBody.md)|  | 
 
 ### Return type
 
-nil (empty response body)
+[**Warehouse**](Warehouse.md)
 
 ### Authorization
 
@@ -256,8 +271,8 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

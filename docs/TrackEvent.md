@@ -1,4 +1,4 @@
-# ShipEngine::TrackEvent
+# ShipEngineApi::TrackEvent
 
 ## Properties
 Name | Type | Description | Notes

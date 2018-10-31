@@ -1,39 +1,42 @@
-# ShipEngine::AddressValidationApi
+# ShipEngineApi::AddressValidationApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**validate_addresses**](AddressValidationApi.md#validate_addresses) | **POST** /v1/addresses/validate | 
+[**v1_addresses_validate_post**](AddressValidationApi.md#v1_addresses_validate_post) | **POST** /v1/addresses/validate | addresses.validate_addresses
 
 
-# **validate_addresses**
-> Array&lt;AddressValidationResponseDTO&gt; validate_addresses(addresses)
+# **v1_addresses_validate_post**
+> Array&lt;AddressValidationResult&gt; v1_addresses_validate_post(body)
+
+addresses.validate_addresses
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::AddressValidationApi.new
+api_instance = ShipEngineApi::AddressValidationApi.new
 
-addresses = [ShipEngine::AddressDTO.new] # Array<AddressDTO> | 
+body = [ShipEngineApi::Address.new] # Array<Address> | 
 
 
 begin
-  result = api_instance.validate_addresses(addresses)
+  #addresses.validate_addresses
+  result = api_instance.v1_addresses_validate_post(body)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling AddressValidationApi->validate_addresses: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling AddressValidationApi->v1_addresses_validate_post: #{e}"
 end
 ```
 
@@ -41,11 +44,11 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addresses** | [**Array&lt;AddressDTO&gt;**](AddressDTO.md)|  | 
+ **body** | [**Array&lt;Address&gt;**](Address.md)|  | 
 
 ### Return type
 
-[**Array&lt;AddressValidationResponseDTO&gt;**](AddressValidationResponseDTO.md)
+[**Array&lt;AddressValidationResult&gt;**](AddressValidationResult.md)
 
 ### Authorization
 
@@ -53,8 +56,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

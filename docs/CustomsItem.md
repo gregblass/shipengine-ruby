@@ -1,9 +1,9 @@
-# ShipEngine::CustomsItem
+# ShipEngineApi::CustomsItem
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**customs_item_id** | **String** |  | [optional] 
+**customs_item_id** | **String** | A string that uniquely identifies the customs item id | [optional] 
 **description** | **String** |  | [optional] 
 **quantity** | **Integer** |  | [optional] 
 **value** | **Float** |  | [optional] 

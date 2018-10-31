@@ -1,149 +1,46 @@
-# ShipEngine::TrackingApi
+# ShipEngineApi::TrackingApi
 
 All URIs are relative to *https://api.shipengine.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**start_tracking**](TrackingApi.md#start_tracking) | **POST** /v1/tracking/start | 
-[**stop_tracking**](TrackingApi.md#stop_tracking) | **POST** /v1/tracking/stop | 
-[**track**](TrackingApi.md#track) | **GET** /v1/tracking | 
+[**v1_tracking_get**](TrackingApi.md#v1_tracking_get) | **GET** /v1/tracking | tracking.track
+[**v1_tracking_start_post**](TrackingApi.md#v1_tracking_start_post) | **POST** /v1/tracking/start | tracking.start_tracking
+[**v1_tracking_stop_post**](TrackingApi.md#v1_tracking_stop_post) | **POST** /v1/tracking/stop | tracking.stop_tracking
 
 
-# **start_tracking**
-> start_tracking(opts)
+# **v1_tracking_get**
+> TrackingInformationResponseBody v1_tracking_get(opts)
 
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::TrackingApi.new
-
-opts = { 
-  carrier_code: "carrier_code_example", # String | 
-  tracking_number: "tracking_number_example" # String | 
-}
-
-begin
-  api_instance.start_tracking(opts)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling TrackingApi->start_tracking: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **carrier_code** | **String**|  | [optional] 
- **tracking_number** | **String**|  | [optional] 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
-
-
-
-# **stop_tracking**
-> stop_tracking(opts)
+tracking.track
 
 
 
 ### Example
 ```ruby
 # load the gem
-require 'ship_engine'
+require 'shipengine_api'
 # setup authorization
-ShipEngine.configure do |config|
+ShipEngineApi.configure do |config|
   # Configure API key authorization: api-key
   config.api_key['api-key'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   #config.api_key_prefix['api-key'] = 'Bearer'
 end
 
-api_instance = ShipEngine::TrackingApi.new
+api_instance = ShipEngineApi::TrackingApi.new
 
 opts = { 
-  carrier_code: "carrier_code_example", # String | 
-  tracking_number: "tracking_number_example" # String | 
+  carrier_code: 'carrier_code_example', # String | 
+  tracking_number: 'tracking_number_example' # String | 
 }
 
 begin
-  api_instance.stop_tracking(opts)
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling TrackingApi->stop_tracking: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **carrier_code** | **String**|  | [optional] 
- **tracking_number** | **String**|  | [optional] 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[api-key](../README.md#api-key)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
-
-
-
-# **track**
-> TrackingInformation track(opts)
-
-
-
-### Example
-```ruby
-# load the gem
-require 'ship_engine'
-# setup authorization
-ShipEngine.configure do |config|
-  # Configure API key authorization: api-key
-  config.api_key['api-key'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['api-key'] = 'Bearer'
-end
-
-api_instance = ShipEngine::TrackingApi.new
-
-opts = { 
-  carrier_code: "carrier_code_example", # String | 
-  tracking_number: "tracking_number_example" # String | 
-}
-
-begin
-  result = api_instance.track(opts)
+  #tracking.track
+  result = api_instance.v1_tracking_get(opts)
   p result
-rescue ShipEngine::ApiError => e
-  puts "Exception when calling TrackingApi->track: #{e}"
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling TrackingApi->v1_tracking_get: #{e}"
 end
 ```
 
@@ -156,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TrackingInformation**](TrackingInformation.md)
+[**TrackingInformationResponseBody**](TrackingInformationResponseBody.md)
 
 ### Authorization
 
@@ -164,8 +61,120 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_tracking_start_post**
+> v1_tracking_start_post(opts)
+
+tracking.start_tracking
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::TrackingApi.new
+
+opts = { 
+  carrier_code: 'carrier_code_example', # String | 
+  tracking_number: 'tracking_number_example' # String | 
+}
+
+begin
+  #tracking.start_tracking
+  api_instance.v1_tracking_start_post(opts)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling TrackingApi->v1_tracking_start_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_code** | **String**|  | [optional] 
+ **tracking_number** | **String**|  | [optional] 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+# **v1_tracking_stop_post**
+> v1_tracking_stop_post(opts)
+
+tracking.stop_tracking
+
+
+
+### Example
+```ruby
+# load the gem
+require 'shipengine_api'
+# setup authorization
+ShipEngineApi.configure do |config|
+  # Configure API key authorization: api-key
+  config.api_key['api-key'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['api-key'] = 'Bearer'
+end
+
+api_instance = ShipEngineApi::TrackingApi.new
+
+opts = { 
+  carrier_code: 'carrier_code_example', # String | 
+  tracking_number: 'tracking_number_example' # String | 
+}
+
+begin
+  #tracking.stop_tracking
+  api_instance.v1_tracking_stop_post(opts)
+rescue ShipEngineApi::ApiError => e
+  puts "Exception when calling TrackingApi->v1_tracking_stop_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **carrier_code** | **String**|  | [optional] 
+ **tracking_number** | **String**|  | [optional] 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[api-key](../README.md#api-key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 
 

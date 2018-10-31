@@ -1,10 +1,10 @@
-# ShipEngine::InternationalOptions
+# ShipEngineApi::InternationalOptions
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contents** | **String** |  | [optional] 
+**contents** | [**Contents**](Contents.md) |  | [optional] 
 **customs_items** | [**Array&lt;CustomsItem&gt;**](CustomsItem.md) |  | [optional] 
-**non_delivery** | **String** |  | [optional] 
+**non_delivery** | [**NonDelivery**](NonDelivery.md) |  | [optional] 
 
 

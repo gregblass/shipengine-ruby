@@ -1,1 +1,0 @@
-API_TEST_KEY = 'EQeX7jWYui+rPivFlrxT13siOrDlQvoEfmXCASNTOAU'
